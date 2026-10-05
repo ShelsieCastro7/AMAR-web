@@ -8,25 +8,27 @@ import Footer from '../components/Footer.astro';
   <Header />
 
   <main class="pt-24">
-    
-    <!-- HERO -->
-    <section class="relative min-h-[80vh] flex items-center bg-amar-verde/10">
+
+    <!-- ============================================ -->
+    <!-- 1. HERO -->
+    <!-- ============================================ -->
+    <section class="relative min-h-[85vh] flex items-center bg-amar-verde/10 overflow-hidden">
       <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-        
+
         <div>
-          <p class="text-amar-naranja font-semibold text-sm tracking-widest uppercase mb-4">
+          <p class="text-amar-negro font-semibold text-sm tracking-widest uppercase mb-4">
             AMAR · Amor en Movimiento, Acción y Resistencia
           </p>
           <h1 class="font-titulo text-5xl md:text-6xl lg:text-7xl font-bold text-amar-negro leading-tight mb-6">
             Jóvenes transformando <span class="text-amar-verde">territorios</span>
           </h1>
-          <p class="text-lg text-amar-gris leading-relaxed mb-8 max-w-xl">
-            Somos AMAR, un colectivo que acompaña a jóvenes para que lideren la transformación de sus propios territorios: lo que les incomoda o les inspira en temas ambientales, de vida digna y paz.
+          <p class="text-lg text-amar-gris leading-relaxed mb-6 max-w-xl">
+            Acompañamos a jóvenes para que lideren la transformación de sus propios territorios: lo que les incomoda o les inspira en temas ambientales, de vida digna y paz.
           </p>
           <p class="text-amar-verdeOscuro font-semibold italic mb-8">
             No hacemos proyectos para ellos. Los hacemos con ellos.
           </p>
-          
+
           <div class="flex flex-wrap gap-4">
             <a href="/que-hacemos" class="bg-amar-verde text-white px-7 py-3.5 rounded-full font-semibold hover:bg-amar-verdeOscuro transition">
               Conoce nuestro trabajo
@@ -37,7 +39,7 @@ import Footer from '../components/Footer.astro';
           </div>
         </div>
 
-        <!-- Imagen placeholder -->
+        <!-- Imagen placeholder (luego pondrás foto real) -->
         <div class="relative">
           <div class="aspect-square rounded-3xl bg-amar-verde/30 flex items-center justify-center">
             <p class="text-amar-verdeOscuro font-medium text-center px-6">
@@ -48,11 +50,13 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
-    <!-- MINI DASHBOARD -->
+    <!-- ============================================ -->
+    <!-- 2. MINI DASHBOARD -->
+    <!-- ============================================ -->
     <section class="py-20 bg-amar-beige">
       <div class="max-w-7xl mx-auto px-6">
         <h2 class="font-titulo text-3xl md:text-4xl font-bold text-center mb-4">
-          Nuestro impacto en movimiento
+          Nuestro impacto
         </h2>
         <p class="text-center text-amar-gris mb-12 max-w-2xl mx-auto">
           Cada número representa un territorio, una persona y una historia que se transforma.
@@ -73,6 +77,247 @@ import Footer from '../components/Footer.astro';
               <p class="text-sm text-amar-gris">{stat.label}</p>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 3. QUÉ HACEMOS -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="font-titulo text-3xl md:text-4xl font-bold mb-4">
+            Líneas de trabajo
+          </h2>
+          <p class="text-amar-gris max-w-2xl mx-auto">
+            Trabajamos desde tres líneas que se entrelazan en cada territorio.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="bg-amar-beige rounded-3xl p-8 hover:shadow-lg transition">
+            <div class="text-5xl mb-4">🌍</div>
+            <h3 class="font-titulo text-2xl font-bold text-amar-verdeOscuro mb-4">
+              Territorio y ambiente
+            </h3>
+            <p class="text-amar-gris leading-relaxed">
+              Cuidamos, defendemos y recuperamos los ecosistemas que nos sostienen. Nuestro primer territorio de acción es el Humedal Jaboque, en Engativá, Bogotá.
+            </p>
+          </div>
+
+          <div class="bg-amar-beige rounded-3xl p-8 hover:shadow-lg transition">
+            <div class="text-5xl mb-4">🕊️</div>
+            <h3 class="font-titulo text-2xl font-bold text-amar-verdeOscuro mb-4">
+              Paz y convivencia
+            </h3>
+            <p class="text-amar-gris leading-relaxed">
+              Construimos espacios de encuentro, diálogo y reconciliación entre las personas y con los territorios que habitan.
+            </p>
+          </div>
+
+          <div class="bg-amar-beige rounded-3xl p-8 hover:shadow-lg transition">
+            <div class="text-5xl mb-4">✊</div>
+            <h3 class="font-titulo text-2xl font-bold text-amar-verdeOscuro mb-4">
+              Vida digna y derechos
+            </h3>
+            <p class="text-amar-gris leading-relaxed">
+              Promovemos el acceso a condiciones de vida justas y el ejercicio pleno de los derechos, especialmente de las juventudes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 4. PROYECTOS DESTACADOS -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-amar-beige">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="font-titulo text-3xl md:text-4xl font-bold mb-4">
+            Lo que estamos construyendo
+          </h2>
+          <p class="text-amar-gris max-w-2xl mx-auto">
+            Iniciativas que nacen del encuentro con las comunidades.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition">
+            <div class="aspect-video bg-amar-verde/20 flex items-center justify-center text-6xl">
+              🌊
+            </div>
+            <div class="p-6">
+              <h3 class="font-titulo text-xl font-bold text-amar-negro mb-3">
+                Amigos del Agua
+              </h3>
+              <p class="text-amar-gris text-sm leading-relaxed mb-4">
+                20 jóvenes organizados para cuidar el Humedal Jaboque, en Engativá, Bogotá.
+              </p>
+              <p class="text-amar-verdeOscuro text-sm font-semibold">
+                +150 jóvenes se han sumado a las actividades
+              </p>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition">
+            <div class="aspect-video bg-amar-verde/20 flex items-center justify-center text-6xl">
+              🎉
+            </div>
+            <div class="p-6">
+              <h3 class="font-titulo text-xl font-bold text-amar-negro mb-3">
+                Festival Agua Madre
+              </h3>
+              <p class="text-amar-gris text-sm leading-relaxed mb-4">
+                Encuentro artístico, cultural y comunitario en torno al agua y los territorios.
+              </p>
+              <p class="text-amar-verdeOscuro text-sm font-semibold">
+                +300 personas alcanzadas entre bici recorridos, caminatas y festival
+              </p>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition">
+            <div class="aspect-video bg-amar-verde/20 flex items-center justify-center text-6xl">
+              🎲
+            </div>
+            <div class="p-6">
+              <h3 class="font-titulo text-xl font-bold text-amar-negro mb-3">
+                Juego de Mesa del Humedal
+              </h3>
+              <p class="text-amar-gris text-sm leading-relaxed mb-4">
+                Un juego co-diseñado con la comunidad, inspirado en el Humedal Jaboque.
+              </p>
+              <p class="text-amar-verdeOscuro text-sm font-semibold">
+                En diseño participativo durante 2025
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="/proyectos" class="inline-block border-2 border-amar-verde text-amar-verde px-7 py-3.5 rounded-full font-semibold hover:bg-amar-verde hover:text-white transition">
+            Ver todos los proyectos
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 5. QUIÉNES SOMOS -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        
+        <div>
+          <h2 class="font-titulo text-3xl md:text-4xl font-bold mb-6">
+            Quiénes somos
+          </h2>
+          <p class="text-amar-gris leading-relaxed mb-4">
+            <strong class="text-amar-negro">AMAR</strong> —Amor en Movimiento, Acción y Resistencia— es un colectivo que nació en 2025 con una convicción: <em>los territorios se transforman cuando las juventudes los habitan, los sienten y los defienden.</em>
+          </p>
+          <p class="text-amar-gris leading-relaxed mb-8">
+            Trabajamos en Bogotá, principalmente en Engativá, acompañando procesos ambientales, de vida digna y paz. Nuestra misión es empoderar a los jóvenes para que se conviertan en agentes de cambio en sus comunidades, a través de programas educativos, talleres de habilidades y oportunidades de voluntariado.
+          </p>
+          <a href="/quienes-somos" class="inline-block bg-amar-verde text-white px-7 py-3.5 rounded-full font-semibold hover:bg-amar-verdeOscuro transition">
+            Conoce nuestra historia
+          </a>
+        </div>
+
+        <div class="aspect-square rounded-3xl bg-amar-verde/20 flex items-center justify-center">
+          <p class="text-amar-verdeOscuro font-medium text-center px-6">
+            [Foto del equipo o de una actividad comunitaria]
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 6. TESTIMONIOS -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-amar-verde/10">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="font-titulo text-3xl md:text-4xl font-bold text-center mb-12">
+          Voces de AMAR
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          
+          <blockquote class="bg-white rounded-3xl p-8 shadow-sm">
+            <p class="text-lg text-amar-gris italic mb-4">
+              "AMAR me ha dado la confianza que necesitaba para creer en mí misma."
+            </p>
+            <footer class="text-amar-verdeOscuro font-semibold">
+              — Ana, 17 años
+            </footer>
+          </blockquote>
+
+          <blockquote class="bg-white rounded-3xl p-8 shadow-sm">
+            <p class="text-lg text-amar-gris italic mb-4">
+              "Nunca pensé que podría ser un líder. AMAR me enseñó que puedo hacer una diferencia."
+            </p>
+            <footer class="text-amar-verdeOscuro font-semibold">
+              — Carlos, 19 años
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 7. INVOLÚCRATE -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="font-titulo text-3xl md:text-4xl font-bold mb-4">
+            Sé parte de AMAR
+          </h2>
+          <p class="text-amar-gris max-w-2xl mx-auto">
+            Hay muchas formas de transformar territorios. Encuentra la tuya.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          
+          <a href="/involucrate#donar" class="bg-amar-beige rounded-3xl p-8 text-center hover:shadow-lg hover:bg-amar-verde/10 transition group">
+            <div class="text-5xl mb-4 group-hover:scale-110 transition">❤️</div>
+            <h3 class="font-titulo text-xl font-bold text-amar-verdeOscuro mb-2">
+              Donar
+            </h3>
+            <p class="text-amar-gris text-sm">
+              Apoya nuestros procesos con un aporte
+            </p>
+          </a>
+
+          <a href="/involucrate#voluntariado" class="bg-amar-beige rounded-3xl p-8 text-center hover:shadow-lg hover:bg-amar-verde/10 transition group">
+            <div class="text-5xl mb-4 group-hover:scale-110 transition">👥</div>
+            <h3 class="font-titulo text-xl font-bold text-amar-verdeOscuro mb-2">
+              Voluntariado
+            </h3>
+            <p class="text-amar-gris text-sm">
+              Súmate a las actividades en territorio
+            </p>
+          </a>
+
+          <a href="/involucrate#contacto" class="bg-amar-beige rounded-3xl p-8 text-center hover:shadow-lg hover:bg-amar-verde/10 transition group">
+            <div class="text-5xl mb-4 group-hover:scale-110 transition">💬</div>
+            <h3 class="font-titulo text-xl font-bold text-amar-verdeOscuro mb-2">
+              Contactar
+            </h3>
+            <p class="text-amar-gris text-sm">
+              Escríbenos para alianzas o consultas
+            </p>
+          </a>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="/involucrate" class="inline-block bg-amar-verde text-white px-8 py-4 rounded-full font-semibold hover:bg-amar-verdeOscuro transition">
+            Quiero involucrarme
+          </a>
         </div>
       </div>
     </section>
