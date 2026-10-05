@@ -17,7 +17,8 @@ import Footer from '../components/Footer.astro';
 
         <div>
           <p class="text-amar-negro font-semibold text-sm tracking-widest uppercase mb-4">
-            AMAR · Amor en Movimiento, Acción y Resistencia
+			<span class="font-amar text-xl text-amar-negro">AMAR </span>
+            · Amor en Movimiento, Acción y Resistencia
           </p>
           <h1 class="font-titulo text-5xl md:text-6xl lg:text-7xl font-bold text-amar-negro leading-tight mb-6">
             Jóvenes transformando <span class="text-amar-verde">territorios</span>
@@ -26,7 +27,8 @@ import Footer from '../components/Footer.astro';
             Acompañamos a jóvenes para que lideren la transformación de sus propios territorios: lo que les incomoda o les inspira en temas ambientales, de vida digna y paz.
           </p>
           <p class="text-amar-verdeOscuro font-semibold italic mb-8">
-            No hacemos proyectos para ellos. Los hacemos con ellos.
+            <span class="font-amar text-xl text-amar-verde">AMAR </span>
+			es acción conscienete. Pasa a la acción y cambia el mundo.
           </p>
 
           <div class="flex flex-wrap gap-4">
@@ -34,7 +36,8 @@ import Footer from '../components/Footer.astro';
               Conoce nuestro trabajo
             </a>
             <a href="/involucrate" class="border-2 border-amar-verde text-amar-verde px-7 py-3.5 rounded-full font-semibold hover:bg-amar-verde hover:text-white transition">
-              Involúcrate
+              Súmate a 
+			  <span class="font-amar text-xl text-amar-verde"> AMAR</span>
             </a>
           </div>
         </div>
@@ -55,11 +58,11 @@ import Footer from '../components/Footer.astro';
     <!-- ============================================ -->
     <section class="py-20 bg-amar-beige">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="font-titulo text-3xl md:text-4xl font-bold text-center mb-4">
-          Nuestro impacto
+        <h2 class="font-titulo text-4xl md:text-5xl font-bold text-center mb-4">
+        	¡Así late <span class="font-amar text-5xl text-amar-negro">AMAR</span>! 
         </h2>
-        <p class="text-center text-amar-gris mb-12 max-w-2xl mx-auto">
-          Cada número representa un territorio, una persona y una historia que se transforma.
+        <p class="text-center text-amar-gris text-lg md:text-xl mb-12 max-w-2xl mx-auto">
+          Detrás de cada cifra hay un nombre, un territorio y una historia que se esta tejiendo.
         </p>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -69,13 +72,17 @@ import Footer from '../components/Footer.astro';
             { number: '+150', label: 'jóvenes en actividades', icon: '🤝' },
             { number: '1', label: 'humedal cuidado: Jaboque', icon: '📍' },
           ].map((stat) => (
-            <div class="text-center">
-              <div class="text-4xl mb-2">{stat.icon}</div>
-              <div class="font-titulo text-4xl md:text-5xl font-bold text-amar-verde mb-2">
-                {stat.number}
-              </div>
-              <p class="text-sm text-amar-gris">{stat.label}</p>
-            </div>
+            <div class="text-center group">
+				<div class="text-4xl mb-3 transition-transform group-hover:scale-110">
+					{stat.icon}
+				</div>
+				<div class="font-titulo text-5xl md:text-6xl font-bold text-amar-verde mb-3 leading-none">
+					{stat.number}
+				</div>
+				<p class="text-sm md:text-base text-amar-gris leading-snug max-w-[180px] mx-auto">
+					{stat.label}
+				</p>
+			</div>
           ))}
         </div>
       </div>
@@ -87,10 +94,10 @@ import Footer from '../components/Footer.astro';
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="font-titulo text-3xl md:text-4xl font-bold mb-4">
+          <h2 class="font-titulo text-4xl md:text-5xl font-bold mb-4">
             Líneas de trabajo
           </h2>
-          <p class="text-amar-gris max-w-2xl mx-auto">
+          <p class="text-amar-gris text-lg md:text-xl max-w-2xl mx-auto">
             Trabajamos desde tres líneas que se entrelazan en cada territorio.
           </p>
         </div>
@@ -136,10 +143,10 @@ import Footer from '../components/Footer.astro';
     <section class="py-20 bg-amar-beige">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="font-titulo text-3xl md:text-4xl font-bold mb-4">
+          <h2 class="font-titulo text-4xl md:text-5xl font-bold mb-4">
             Lo que estamos construyendo
           </h2>
-          <p class="text-amar-gris max-w-2xl mx-auto">
+          <p class="text-amar-gris text-lg md:text-xl max-w-2xl mx-auto">
             Iniciativas que nacen del encuentro con las comunidades.
           </p>
         </div>
@@ -213,11 +220,11 @@ import Footer from '../components/Footer.astro';
       <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         
         <div>
-          <h2 class="font-titulo text-3xl md:text-4xl font-bold mb-6">
+          <h2 class="font-titulo text-4xl md:text-5xl font-bold mb-6">
             Quiénes somos
           </h2>
           <p class="text-amar-gris leading-relaxed mb-4">
-            <strong class="text-amar-negro">AMAR</strong> —Amor en Movimiento, Acción y Resistencia— es un colectivo que nació en 2025 con una convicción: <em>los territorios se transforman cuando las juventudes los habitan, los sienten y los defienden.</em>
+            <strong class="font-amar text-amar-negro">AMAR</strong> —Amor en Movimiento, Acción y Resistencia— es un colectivo que nació en 2025 con una convicción: <em>los territorios se transforman cuando las juventudes los habitan, los sienten y los defienden.</em>
           </p>
           <p class="text-amar-gris leading-relaxed mb-8">
             Trabajamos en Bogotá, principalmente en Engativá, acompañando procesos ambientales, de vida digna y paz. Nuestra misión es empoderar a los jóvenes para que se conviertan en agentes de cambio en sus comunidades, a través de programas educativos, talleres de habilidades y oportunidades de voluntariado.
@@ -240,15 +247,15 @@ import Footer from '../components/Footer.astro';
     <!-- ============================================ -->
     <section class="py-20 bg-amar-verde/10">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="font-titulo text-3xl md:text-4xl font-bold text-center mb-12">
-          Voces de AMAR
+        <h2 class="font-titulo text-4xl md:text-5xl font-bold text-center mb-12">
+          Voces de <span class="font-amar text-5xl text-amar-negro">AMAR</span>
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           
           <blockquote class="bg-white rounded-3xl p-8 shadow-sm">
             <p class="text-lg text-amar-gris italic mb-4">
-              "AMAR me ha dado la confianza que necesitaba para creer en mí misma."
+              "<span class="font-amar text-xl text-amar-negro">AMAR</span> me ha dado la confianza que necesitaba para creer en mí misma."
             </p>
             <footer class="text-amar-verdeOscuro font-semibold">
               — Ana, 17 años
@@ -257,7 +264,7 @@ import Footer from '../components/Footer.astro';
 
           <blockquote class="bg-white rounded-3xl p-8 shadow-sm">
             <p class="text-lg text-amar-gris italic mb-4">
-              "Nunca pensé que podría ser un líder. AMAR me enseñó que puedo hacer una diferencia."
+              "Nunca pensé que podría ser un líder. <span class="font-amar text-xl text-amar-negro">AMAR</span> me enseñó que puedo hacer una diferencia."
             </p>
             <footer class="text-amar-verdeOscuro font-semibold">
               — Carlos, 19 años
@@ -273,10 +280,10 @@ import Footer from '../components/Footer.astro';
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="font-titulo text-3xl md:text-4xl font-bold mb-4">
-            Sé parte de AMAR
+          <h2 class="font-titulo text-4xl md:text-5xl font-bold mb-4">
+            Sé parte de <span class="font-amar text-5xl text-amar-negro">AMAR</span>
           </h2>
-          <p class="text-amar-gris max-w-2xl mx-auto">
+          <p class="text-amar-gris text-lg md:text-xl max-w-2xl mx-auto">
             Hay muchas formas de transformar territorios. Encuentra la tuya.
           </p>
         </div>
