@@ -1,0 +1,90 @@
+---
+const navItems = [
+  { name: 'Inicio', href: '/' },
+  { name: 'Quiénes somos', href: '/quienes-somos' },
+  { name: 'Qué hacemos', href: '/que-hacemos' },
+  { name: 'Proyectos', href: '/proyectos' },
+  { name: 'Dashboard', href: '/dashboard' },
+  { name: 'Publicaciones', href: '/publicaciones' },
+  { name: 'Involúcrate', href: '/involucrate' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-amar-beige/95 backdrop-blur-sm border-b border-amar-verde/20">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 rounded-full bg-amar-verde flex items-center justify-center text-white font-titulo font-bold text-lg group-hover:bg-amar-verdeOscuro transition">
+        A
+      </div>
+      <span class="font-titulo font-bold text-xl text-amar-verde">AMAR</span>
+    </a>
+
+    <!-- Navegación desktop -->
+    <ul class="hidden md:flex items-center gap-8">
+      {navItems.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            class:list={[
+              'text-sm font-medium transition hover:text-amar-verde',
+              currentPath === item.href ? 'text-amar-verde font-semibold' : 'text-amar-gris',
+            ]}
+          >
+            {item.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- CTA -->
+    <a
+      href="/involucrate"
+      class="hidden md:inline-block bg-amar-verde text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-amar-verdeOscuro transition"
+    >
+      Involúcrate
+    </a>
+
+    <!-- Menú móvil (botón) -->
+    <button
+      id="menu-toggle"
+      class="md:hidden text-amar-negro"
+      aria-label="Abrir menú"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Menú móvil desplegable -->
+  <div id="mobile-menu" class="hidden md:hidden bg-amar-beige border-t border-amar-verde/20 px-6 py-4">
+    <ul class="flex flex-col gap-4">
+      {navItems.map((item) => (
+        <li>
+          <a href={item.href} class="text-amar-gris hover:text-amar-verde font-medium">
+            {item.name}
+          </a>
+        </li>
+      ))}
+      <li>
+        <a href="/involucrate" class="inline-block bg-amar-verde text-white px-5 py-2.5 rounded-full text-sm font-semibold">
+          Involúcrate
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

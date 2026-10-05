@@ -1,0 +1,58 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-amar-negro text-amar-beige mt-24">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      
+      <!-- Columna 1: Marca -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full bg-amar-verde flex items-center justify-center text-white font-titulo font-bold text-lg">
+            A
+          </div>
+          <span class="font-titulo font-bold text-xl">AMAR</span>
+        </div>
+        <p class="text-sm text-amar-beige/70 italic">
+          Amor en Movimiento, Acción y Resistencia
+        </p>
+      </div>
+
+      <!-- Columna 2: Enlaces -->
+      <div>
+        <h3 class="font-titulo font-bold text-lg mb-4">Navegación</h3>
+        <ul class="space-y-2 text-sm text-amar-beige/80">
+          <li><a href="/" class="hover:text-amar-verde transition">Inicio</a></li>
+          <li><a href="/quienes-somos" class="hover:text-amar-verde transition">Quiénes somos</a></li>
+          <li><a href="/que-hacemos" class="hover:text-amar-verde transition">Qué hacemos</a></li>
+          <li><a href="/proyectos" class="hover:text-amar-verde transition">Proyectos</a></li>
+          <li><a href="/involucrate" class="hover:text-amar-verde transition">Involúcrate</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Contacto -->
+      <div>
+        <h3 class="font-titulo font-bold text-lg mb-4">Contacto</h3>
+        <ul class="space-y-2 text-sm text-amar-beige/80">
+          <li>
+            <a href="mailto:amaragrupacion@gmail.com" class="hover:text-amar-verde transition">
+              amaragrupacion@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/amaragrupacion" target="_blank" rel="noopener" class="hover:text-amar-verde transition">
+              Instagram @amaragrupacion
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Línea inferior -->
+    <div class="border-t border-amar-beige/20 mt-12 pt-6 text-center text-xs text-amar-beige/60">
+      © {year} AMAR. Todos los derechos reservados.
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta AMAR */
+  --color-amar-verde: #8B9A5B;
+  --color-amar-verdeOscuro: #6B7A3F;
+  --color-amar-beige: #F5F0E1;
+  --color-amar-beigeOscuro: #E8DFC8;
+  --color-amar-negro: #1A1A1A;
+  --color-amar-gris: #4A4A4A;
+  --color-amar-naranja: #E85D3A;
+
+  /* Tipografías */
+  --font-titulo: "Playfair Display", serif;
+  --font-cuerpo: "Inter", sans-serif;
+}

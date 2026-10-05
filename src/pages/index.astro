@@ -1,17 +1,83 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Inicio">
+  <Header />
+
+  <main class="pt-24">
+    
+    <!-- HERO -->
+    <section class="relative min-h-[80vh] flex items-center bg-amar-verde/10">
+      <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+        
+        <div>
+          <p class="text-amar-naranja font-semibold text-sm tracking-widest uppercase mb-4">
+            AMAR · Amor en Movimiento, Acción y Resistencia
+          </p>
+          <h1 class="font-titulo text-5xl md:text-6xl lg:text-7xl font-bold text-amar-negro leading-tight mb-6">
+            Jóvenes transformando <span class="text-amar-verde">territorios</span>
+          </h1>
+          <p class="text-lg text-amar-gris leading-relaxed mb-8 max-w-xl">
+            Somos AMAR, un colectivo que acompaña a jóvenes para que lideren la transformación de sus propios territorios: lo que les incomoda o les inspira en temas ambientales, de vida digna y paz.
+          </p>
+          <p class="text-amar-verdeOscuro font-semibold italic mb-8">
+            No hacemos proyectos para ellos. Los hacemos con ellos.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href="/que-hacemos" class="bg-amar-verde text-white px-7 py-3.5 rounded-full font-semibold hover:bg-amar-verdeOscuro transition">
+              Conoce nuestro trabajo
+            </a>
+            <a href="/involucrate" class="border-2 border-amar-verde text-amar-verde px-7 py-3.5 rounded-full font-semibold hover:bg-amar-verde hover:text-white transition">
+              Involúcrate
+            </a>
+          </div>
+        </div>
+
+        <!-- Imagen placeholder -->
+        <div class="relative">
+          <div class="aspect-square rounded-3xl bg-amar-verde/30 flex items-center justify-center">
+            <p class="text-amar-verdeOscuro font-medium text-center px-6">
+              [Foto real del Humedal Jaboque<br />o del Festival Agua Madre]
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MINI DASHBOARD -->
+    <section class="py-20 bg-amar-beige">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="font-titulo text-3xl md:text-4xl font-bold text-center mb-4">
+          Nuestro impacto en movimiento
+        </h2>
+        <p class="text-center text-amar-gris mb-12 max-w-2xl mx-auto">
+          Cada número representa un territorio, una persona y una historia que se transforma.
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { number: '+300', label: 'personas alcanzadas', icon: '👥' },
+            { number: '20', label: 'jóvenes en Amigos del Agua', icon: '🌱' },
+            { number: '+150', label: 'jóvenes en actividades', icon: '🤝' },
+            { number: '1', label: 'humedal cuidado: Jaboque', icon: '📍' },
+          ].map((stat) => (
+            <div class="text-center">
+              <div class="text-4xl mb-2">{stat.icon}</div>
+              <div class="font-titulo text-4xl md:text-5xl font-bold text-amar-verde mb-2">
+                {stat.number}
+              </div>
+              <p class="text-sm text-amar-gris">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
