@@ -1,0 +1,369 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Heart, BookOpen, Globe, Users, Sprout, Palette, Scale, Sparkles, ArrowRight } from '@lucide/astro';
+---
+
+<Layout title="Quiénes somos">
+  <Header />
+
+  <main class="pt-24">
+
+    <!-- ============================================ -->
+    <!-- 1. HERO DE PÁGINA -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-beige relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.06] pointer-events-none">
+        <div class="absolute top-20 left-10 w-96 h-96 rounded-full bg-amar-verde blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-amar-naranja blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative">
+        <div class="max-w-4xl">
+        <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-6">
+            Quiénes somos
+        </p>
+        <h1 class="font-titulo text-5xl md:text-6xl lg:text-7xl font-bold text-amar-negro leading-tight mb-8">
+            Amor en Movimiento, <br />
+            <span class="text-amar-verde">Acción y Resistencia</span>
+        </h1>
+        <p class="text-2xl md:text-3xl text-amar-gris leading-relaxed max-w-3xl font-titulo italic">
+            Un movimiento juvenil que transforma territorios desde 2018.
+        </p>
+        </div>
+    </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 2. ¿QUIÉNES SOMOS? -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-azulPetroleo/30">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="grid md:grid-cols-2 gap-16 items-start mb-16">
+
+        <div>
+            <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro leading-tight">
+            Más que una organización, <br />
+            <span class="text-amar-cafe">un movimiento</span>
+            </h2>
+        </div>
+
+        <div class="space-y-6">
+          <p class="text-xl text-amar-gris leading-relaxed">
+            <strong class="font-amar text-amar-negro">AMAR</strong> es un movimiento juvenil que nace desde la educación popular y comunitaria, convencido de que el conocimiento se construye colectivamente y que la transformación social comienza desde abajo, desde los territorios, desde las comunidades.
+          </p>
+          <p class="text-xl text-amar-gris leading-relaxed">
+            Nuestro propósito es <strong class="text-amar-negro">generar conciencia, acción e incidencia</strong> frente a las problemáticas que nos atraviesan y afectan el ejercicio pleno de derechos y el bienestar de nuestros territorios.
+          </p>
+        </div>
+
+        </div>
+
+    </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 3. SIGNIFICADO DEL NOMBRE -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-beige">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="max-w-3xl mb-16">
+          <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+            Nuestro nombre
+          </p>
+          <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro leading-tight">
+            Un nombre que <span class="text-amar-verde">encierra nuestra esencia</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 mb-16">
+          <p class="text-xl text-amar-gris leading-relaxed md:col-span-2 max-w-4xl">
+            Todo comienza con un amor profundo por la vida, por nuestro territorio y por quienes lo habitan. Para algunos, ese amor encuentra su origen en el amor de Dios; para otros, es un amor que nace de la conciencia, de la empatía, de la indignación frente a la injusticia. Pero sin importar de dónde provenga, es un amor que nos ha conquistado y llenado a tal magnitud que no podemos hacer más que compartirlo y multiplicarlo.
+          </p>
+        </div>
+
+        <!-- Las 4 letras -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <!-- AMOR -->
+          <div class="bg-white/70 rounded-3xl p-8">
+            <div class="font-amar text-5xl text-amar-naranja mb-4">A</div>
+            <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-3">Amor</h3>
+            <p class="text-base text-amar-gris leading-relaxed">
+              El amor profundo por la vida, el territorio y las personas es el origen y la fuerza de todo lo que hacemos.
+            </p>
+          </div>
+
+          <!-- MOVIMIENTO -->
+          <div class="bg-white rounded-3xl p-8">
+            <div class="font-amar text-5xl text-amar-naranja mb-4">M</div>
+            <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-3">Movimiento</h3>
+            <p class="text-base text-amar-gris leading-relaxed">
+              No es un amor pasivo. Es un amor que se organiza, se traduce en acciones concretas y teje comunidad desde lo colectivo.
+            </p>
+          </div>
+
+          <!-- ACCIÓN -->
+          <div class="bg-white rounded-3xl p-8">
+            <div class="font-amar text-5xl text-amar-naranja mb-4">A</div>
+            <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-3">Acción</h3>
+            <p class="text-base text-amar-gris leading-relaxed">
+              No basta con sentir: hay que actuar con conciencia, decisión y compasión, respondiendo a las realidades que enfrentamos.
+            </p>
+          </div>
+
+          <!-- RESISTENCIA -->
+          <div class="bg-white rounded-3xl p-8">
+            <div class="font-amar text-5xl text-amar-naranja mb-4">R</div>
+            <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-3">Resistencia</h3>
+            <p class="text-base text-amar-gris leading-relaxed">
+              Nos mantenemos firmes ante las pruebas. Resistir es cuidar, sostener, transformar con esperanza y unidad.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Nuestra convicción -->
+        <div class="mt-20 max-w-4xl mx-auto text-center bg-white/60 rounded-3xl p-12">
+          <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+            Nuestra convicción
+          </p>
+          <p class="text-2xl md:text-3xl font-titulo text-amar-negro leading-snug mb-6">
+            No nos quedamos en la indignación: la transformamos en <span class="text-amar-verde">acción organizada</span>, en resistencia creativa, en construcción de alternativas.
+          </p>
+          <p class="text-xl text-amar-gris leading-relaxed">
+            Creemos que otro mundo es posible, y ese mundo se construye desde el amor organizado, desde la juventud comprometida, desde la comunidad en movimiento.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 4. NUESTRA HISTORIA -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="max-w-3xl mb-16">
+          <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+            Nuestra historia
+          </p>
+          <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro leading-tight">
+             <span class="font-amar text-5xl text-amar-negro">AMAR</span> existió <span class="text-amar-verde">antes de tener un nombre</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-16 items-start mb-20">
+
+          <div class="space-y-6">
+            <p class="text-xl text-amar-gris leading-relaxed">
+              Todo comenzó con un sentir compartido: la certeza de que no podíamos permanecer indiferentes ante lo que sucedía en nuestro entorno. Sentíamos que siempre había algo que se podía hacer. Y sabíamos que este camino no podía recorrerse en soledad.
+            </p>
+            <p class="text-xl text-amar-gris leading-relaxed">
+              Empezamos con amigos, compañeros, conocidos... con todas aquellas personas que sentían el llamado de hacer algo, aunque no supieran bien qué. Juntos comenzamos a desarrollar proyectos comunitarios: memoria, paz, ambiente, proyectos de vida, formación en valores.
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            <p class="text-xl text-amar-gris leading-relaxed">
+              Iniciamos sin el conocimiento completo, sin todas las herramientas. Simplemente empezamos a caminar, y el camino nos ha ido formando. Aprendimos algo fundamental: <strong class="text-amar-negro">no hay que esperar a tener todo resuelto para actuar</strong>.
+            </p>
+            <p class="text-xl text-amar-gris leading-relaxed">
+              Con el tiempo descubrimos lo que teníamos en común: lo que nos motivaba era el amor. Y el amor era la revolución que anhelábamos. Una revolución silenciosa pero profundamente poderosa. Así nació <span class="font-amar text-2xl text-amar-gris">AMAR</span>.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Línea de tiempo -->
+        <div class="relative bg-amar-beige rounded-3xl p-12">
+
+          <h3 class="font-titulo text-2xl font-bold text-amar-negro text-center mb-12">
+            Nuestra línea de tiempo
+          </h3>
+
+          <!-- Línea conectora -->
+          <div class="relative">
+            <div class="absolute top-8 left-0 right-0 h-px bg-amar-verde/30 hidden md:block"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 relative">
+
+              <!-- 2018 -->
+              <div class="text-center">
+                <div class="w-16 h-16 rounded-full bg-amar-verde mx-auto mb-6 relative z-10 flex items-center justify-center">
+                  <Users class="w-8 h-8 text-white" />
+                </div>
+                <div class="font-titulo text-4xl font-bold text-amar-verde mb-3">2018</div>
+                <h4 class="font-titulo text-lg font-bold text-amar-negro mb-2">Historia inicial</h4>
+                <p class="text-base text-amar-gris leading-snug">
+                  Comenzamos a caminar juntos, sin nombre pero con un propósito claro.
+                </p>
+              </div>
+
+              <!-- 2025 -->
+              <div class="text-center">
+                <div class="w-16 h-16 rounded-full bg-amar-verdeOscuro mx-auto mb-6 relative z-10 flex items-center justify-center">
+                  <Heart class="w-8 h-8 text-white" />
+                </div>
+                <div class="font-titulo text-4xl font-bold text-amar-verdeOscuro mb-3">2025</div>
+                <h4 class="font-titulo text-lg font-bold text-amar-negro mb-2"><span class="font-amar text-xl text-amar-negro">AMAR</span> se oficializa</h4>
+                <p class="text-base text-amar-gris leading-snug">
+                  Festival Agua Madre · Amigos del Agua · Nace oficialmente A.M.A.R.
+                </p>
+              </div>
+
+              <!-- 2026 -->
+              <div class="text-center">
+                <div class="w-16 h-16 rounded-full bg-amar-cafe mx-auto mb-6 relative z-10 flex items-center justify-center">
+                  <Sparkles class="w-8 h-8 text-white" />
+                </div>
+                <div class="font-titulo text-4xl font-bold text-amar-cafe mb-3">2026</div>
+                <h4 class="font-titulo text-lg font-bold text-amar-negro mb-2">Fundación <span class="font-amar text-xl text-amar-negro">AMAR</span></h4>
+                <p class="text-base text-amar-gris leading-snug">
+                  Humedales en Juego · SOFA 2026 · Nos constituimos como Fundación.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Cierre de la historia -->
+        <div class="max-w-3xl mx-auto text-center mt-16">
+          <p class="text-2xl md:text-3xl font-titulo text-amar-negro leading-snug italic">
+            "Llevamos años tejiendo comunidad, formando líderes, transformando territorios. <br />
+            <span class="text-amar-verde">Y apenas estamos comenzando.</span>"
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 5. MISIÓN Y VISIÓN -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-beige">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="max-w-3xl mb-16">
+          <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+            Hacia dónde vamos
+          </p>
+          <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro leading-tight">
+            Misión y <span class="text-amar-verde">visión</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+
+          <!-- Misión -->
+          <div class="bg-white/70 rounded-3xl p-10">
+            <div class="w-14 h-14 rounded-full bg-amar-verde/20 flex items-center justify-center mb-6">
+              <Heart class="w-7 h-7 text-amar-verde" />
+            </div>
+            <h3 class="font-titulo text-3xl font-bold text-amar-negro mb-6">
+              Misión
+            </h3>
+            <p class="text-xl text-amar-gris leading-relaxed">
+              Formar y acompañar jóvenes líderes desde la educación popular y comunitaria, para que identifiquen, lideren y transformen las problemáticas que afectan sus territorios y comunidades, generando acciones concretas que contribuyan al ejercicio pleno de derechos, la construcción de paz y el buen vivir.
+            </p>
+          </div>
+
+          <!-- Visión -->
+          <div class="bg-white/70 rounded-3xl p-10">
+            <div class="w-14 h-14 rounded-full bg-amar-cafe/20 flex items-center justify-center mb-6">
+              <Sparkles class="w-7 h-7 text-amar-cafe" />
+            </div>
+            <h3 class="font-titulo text-3xl font-bold text-amar-negro mb-6">
+              Visión
+            </h3>
+            <p class="text-xl text-amar-gris leading-relaxed">
+              Ser un movimiento juvenil de referencia en la transformación territorial desde el amor organizado, donde los jóvenes sean reconocidos como protagonistas del presente, capaces de incidir en sus realidades y construir comunidades más justas, pacíficas y sostenibles, tejiendo redes de acción colectiva que inspiren y movilicen a otras generaciones.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 6. VALORES Y PRINCIPIOS -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-ocre/15">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="max-w-3xl mb-16">
+          <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+            Lo que nos guía
+          </p>
+          <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro leading-tight">
+            Nuestros valores y <span class="text-amar-verde">principios</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          {[
+            { icon: Heart, title: 'Amor como motor', desc: 'El amor profundo por la vida, el territorio y las personas es el origen y la fuerza de todo lo que hacemos.' },
+            { icon: BookOpen, title: 'Educación popular', desc: 'El conocimiento se construye desde abajo, reconociendo los saberes de todas las personas más allá de la academia.' },
+            { icon: Globe, title: 'Defensa del territorio', desc: 'El territorio no es solo un espacio físico; es memoria, vida, identidad y hogar que debemos cuidar.' },
+            { icon: Users, title: 'Horizontalidad', desc: 'Trabajamos en comunidad, sin jerarquías verticales, reconociendo que todos tenemos algo valioso que aportar.' },
+            { icon: Sprout, title: 'Diálogo intergeneracional', desc: 'Valoramos el intercambio entre generaciones y culturas como fuente de aprendizaje y enriquecimiento mutuo.' },
+            { icon: Palette, title: 'Arte e investigación', desc: 'El arte nos permite soñar y expresar; la investigación nos ayuda a comprender y proponer soluciones informadas.' },
+            { icon: Scale, title: 'Justicia social', desc: 'Reconocemos las particularidades de cada población y contexto, trabajando por la equidad y la dignidad.' },
+            { icon: Sparkles, title: 'Protagonismo juvenil', desc: 'Los jóvenes no son el futuro: son el presente y tienen la capacidad de transformar sus realidades ahora.' },
+          ].map((valor) => (
+            <div class="group">
+              <div class="w-14 h-14 rounded-full bg-amar-cafe/15 flex items-center justify-center mb-5 transition group-hover:bg-amar-cafe/25 group-hover:scale-110">
+                <valor.icon class="w-7 h-7 text-amar-cafe" />
+              </div>
+              <h3 class="font-titulo text-lg font-bold text-amar-negro mb-3">
+                {valor.title}
+              </h3>
+              <p class="text-base text-amar-gris leading-relaxed">
+                {valor.desc}
+              </p>
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 7. CTA FINAL -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-negro relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.06] pointer-events-none">
+        <div class="absolute top-20 left-10 w-96 h-96 rounded-full bg-amar-verde blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-amar-cafe blur-3xl"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-6 relative text-center">
+        <h2 class="font-titulo text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          ¿Quieres ser parte de esta <span class="text-amar-beige">historia</span>?
+        </h2>
+        <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
+          Hay muchas formas de transformar territorios. Encuentra la tuya.
+        </p>
+        <a
+          href="/involucrate"
+          class="group inline-flex items-center gap-3 bg-amar-verde text-white px-10 py-5 rounded-full font-semibold text-xl hover:bg-amar-verdeOscuro transition"
+        >
+          Quiero involucrarme
+          <ArrowRight class="w-5 h-5 transition-transform group-hover:translate-x-1" />
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
