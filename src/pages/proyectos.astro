@@ -1,0 +1,274 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Users, Heart, ArrowRight, Droplet, Tent, Gamepad2 } from '@lucide/astro';
+---
+
+<Layout title="Proyectos">
+  <Header />
+
+  <main class="pt-24">
+
+    <!-- ============================================ -->
+    <!-- 1. HERO DE PÁGINA -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-beige relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.06] pointer-events-none">
+        <div class="absolute top-20 left-10 w-96 h-96 rounded-full bg-amar-verde blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-amar-naranja blur-3xl"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative">
+        <div class="max-w-4xl">
+          <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-6">
+            Proyectos
+          </p>
+          <h1 class="font-titulo text-5xl md:text-6xl lg:text-7xl font-bold text-amar-negro leading-tight mb-8">
+            Lo que estamos <br />
+            <span class="text-amar-verde">construyendo</span>
+          </h1>
+          <p class="text-2xl md:text-3xl text-amar-gris leading-relaxed max-w-3xl font-titulo italic">
+            Iniciativas que nacen del encuentro con las comunidades.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 2. CON QUIÉN TRABAJAMOS -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="grid md:grid-cols-2 gap-16 items-start mb-16">
+
+          <div>
+            <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+              Con quién trabajamos
+            </p>
+            <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro leading-tight">
+              Jóvenes que transforman <br />
+              <span class="text-amar-verde">sus comunidades</span>
+            </h2>
+          </div>
+
+          <div class="space-y-6">
+            <p class="text-xl text-amar-gris leading-relaxed">
+              Formamos principalmente a <strong class="text-amar-negro">jóvenes y adolescentes</strong> que quieren ser agentes de cambio en sus comunidades. Los proyectos que ellos lideran llegan a diversas poblaciones según las necesidades de cada territorio.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Poblaciones -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+          {[
+            'Niños, niñas y adolescentes',
+            'Familias y comunidades vecinales',
+            'Mujeres y personas en situación de vulnerabilidad',
+            'Adultos mayores',
+            'Comunidades étnicas y diversas',
+            'Cualquier población que necesite ser acompañada o incluida'
+          ].map((poblacion) => (
+            <div class="flex items-start gap-4 bg-amar-beige rounded-2xl p-6">
+              <div class="w-3 h-3 rounded-full bg-amar-verde mt-2 flex-shrink-0"></div>
+              <p class="text-lg text-amar-negro leading-snug">
+                {poblacion}
+              </p>
+            </div>
+          ))}
+
+        </div>
+
+        <!-- Enfoque diferencial -->
+        <div class="max-w-4xl mx-auto bg-amar-verde/10 rounded-3xl p-10 text-center">
+          <p class="text-2xl font-titulo text-amar-negro leading-snug italic">
+            "Trabajamos con un enfoque diferencial, reconociendo y respondiendo a las particularidades de cada contexto, población y territorio, <span class="text-amar-verde">sin imponer soluciones desde afuera</span>."
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 3. NUESTROS PROYECTOS -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-beige">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="max-w-3xl mb-20">
+          <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+            Nuestros proyectos
+          </p>
+          <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro leading-tight">
+            Iniciativas que <span class="text-amar-verde">transforman</span>
+          </h2>
+        </div>
+
+        <!-- PROYECTO 1: AMIGOS DEL AGUA -->
+        <article class="mb-24 bg-white rounded-3xl overflow-hidden">
+          <div class="grid md:grid-cols-2 gap-0">
+
+            <!-- Imagen -->
+            <div class="relative h-80 md:h-auto bg-amar-verde/20 flex items-center justify-center">
+              <div class="text-center px-8">
+                <img
+                    src="/images/amigos-del-agua.jpg"
+                    alt="Amigos del Agua"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <p class="text-amar-verdeOscuro font-semibold text-lg">
+                  Foto del proyecto
+                </p>
+              </div>
+            </div>
+
+            <!-- Contenido -->
+            <div class="p-10 md:p-14">
+              <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+                Proyecto
+              </p>
+              <h3 class="font-titulo text-4xl font-bold text-amar-negro mb-6">
+                Amigos del Agua
+              </h3>
+              <p class="text-xl text-amar-gris leading-relaxed mb-6">
+                Es un proyecto de <strong class="text-amar-negro">educación ambiental</strong> que trabaja por transformar la relación entre las personas y el agua.
+              </p>
+              <p class="text-lg text-amar-gris leading-relaxed mb-8">
+                A través de procesos comunitarios, recorridos por ecosistemas hídricos y espacios de aprendizaje, promovemos una cultura del agua basada en el conocimiento, el respeto y la acción colectiva.
+              </p>
+              <p class="text-amar-verdeOscuro font-semibold italic text-lg border-l-4 border-amar-naranja pl-4">
+                Porque cuidar el agua no es una tarea de unos pocos: es un compromiso de todos.
+              </p>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- PROYECTO 2: FESTIVAL AGUA MADRE -->
+        <article class="mb-24 bg-white rounded-3xl overflow-hidden">
+          <div class="grid md:grid-cols-2 gap-0">
+
+            <!-- Contenido -->
+            <div class="p-10 md:p-14 order-2 md:order-1">
+              <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+                Evento comunitario
+              </p>
+              <h3 class="font-titulo text-4xl font-bold text-amar-negro mb-6">
+                Festival Agua Madre
+              </h3>
+              <p class="text-xl text-amar-gris leading-relaxed mb-6">
+                Un evento comunitario organizado por AMAR en conmemoración del <strong class="text-amar-negro">Día Internacional de los Humedales</strong>.
+              </p>
+              <p class="text-lg text-amar-gris leading-relaxed mb-6">
+                Su propósito es acercar a las comunidades a estos ecosistemas a través de actividades educativas, culturales y ambientales que promueven su cuidado y reconocimiento.
+              </p>
+              <p class="text-lg text-amar-gris leading-relaxed mb-8">
+                Se realizó en tres humedales: iniciando en <strong class="text-amar-negro">Santa Marta</strong>, y continuando en Bogotá con jornadas en el <strong class="text-amar-negro">Jaboque</strong> y el <strong class="text-amar-negro">Tíngua Azul</strong>. Incluyó recorridos guiados, avistamiento de aves, recolección de residuos, jogging ambiental, talleres de arte, murales, micrófono abierto y presentaciones de artistas locales.
+              </p>
+              <p class="text-amar-verdeOscuro font-semibold italic text-lg border-l-4 border-amar-naranja pl-4">
+                Un espacio donde la comunidad se encuentra con su territorio, lo reconoce y actúa en su defensa.
+              </p>
+            </div>
+
+            <!-- Imagen -->
+            <div class="relative h-80 md:h-auto bg-amar-naranja/20 flex items-center justify-center order-1 md:order-2">
+              <div class="text-center px-8">
+                <img
+                    src="/images/festival-agua-madre-full.jpeg"
+                    alt="Humedales en Juego"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <p class="text-amar-verdeOscuro font-semibold text-lg">
+                  Foto del festival
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- PROYECTO 3: HUMEDALES EN JUEGO -->
+        <article class="bg-white rounded-3xl overflow-hidden">
+          <div class="grid md:grid-cols-2 gap-0">
+
+            <!-- Imagen -->
+            <div class="relative h-80 md:h-auto bg-amar-verde/20 flex items-center justify-center">
+              <div class="text-center px-8">
+                <img
+                    src="/images/humedales-en-juego.png"
+                    alt="Humedales en Juego"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <p class="text-amar-verdeOscuro font-semibold text-lg">
+                  Foto del juego
+                </p>
+              </div>
+            </div>
+
+            <!-- Contenido -->
+            <div class="p-10 md:p-14">
+              <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+                Proyecto en curso
+              </p>
+              <h3 class="font-titulo text-4xl font-bold text-amar-negro mb-6">
+                Humedales en Juego
+              </h3>
+              <p class="text-xl text-amar-gris leading-relaxed mb-6">
+                Una iniciativa donde estamos <strong class="text-amar-negro">co-creando un juego de mesa</strong> inspirado en el Humedal Jaboque, junto a la comunidad.
+              </p>
+              <p class="text-lg text-amar-gris leading-relaxed mb-8">
+                El juego permite ver qué afecta al humedal, las posibles soluciones, las especies que lo habitan y, sobre todo, generar <strong class="text-amar-negro">conciencia ambiental</strong> desde el juego y la participación.
+              </p>
+
+              <!-- Tags de contenido del juego -->
+              <div class="flex flex-wrap gap-2 mb-8">
+                <span class="px-4 py-2 bg-amar-verde/15 text-amar-verdeOscuro rounded-full text-sm font-semibold">Problemáticas</span>
+                <span class="px-4 py-2 bg-amar-verde/15 text-amar-verdeOscuro rounded-full text-sm font-semibold">Soluciones</span>
+                <span class="px-4 py-2 bg-amar-verde/15 text-amar-verdeOscuro rounded-full text-sm font-semibold">Especies</span>
+                <span class="px-4 py-2 bg-amar-naranja/15 text-amar-naranja rounded-full text-sm font-semibold">Conciencia</span>
+              </div>
+
+              <p class="text-amar-verdeOscuro font-semibold italic text-lg border-l-4 border-amar-naranja pl-4">
+                En diseño participativo durante 2026.
+              </p>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 4. CTA FINAL -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-negro relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.06] pointer-events-none">
+        <div class="absolute top-20 left-10 w-96 h-96 rounded-full bg-amar-verde blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-amar-naranja blur-3xl"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-6 relative text-center">
+        <h2 class="font-titulo text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          ¿Quieres <span class="text-amar-beige">sumarte</span> a un proyecto?
+        </h2>
+        <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
+          Hay muchas formas de ser parte. Encuentra la tuya.
+        </p>
+        <a
+          href="/involucrate"
+          class="group inline-flex items-center gap-3 bg-amar-verde text-white px-10 py-5 rounded-full font-semibold text-xl hover:bg-amar-verdeOscuro transition"
+        >
+          Quiero involucrarme
+          <ArrowRight class="w-5 h-5 transition-transform group-hover:translate-x-1" />
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
