@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Counter from '../components/Counter.astro';
-import { UserGroup, Shell, LineSquiggle, MapPinPlus, MapPlus, HeartHandshake, HouseHeart } from '@lucide/astro';
+import { UserGroup, Shell, LineSquiggle, MapPinPlus, MapPlus, HeartHandshake, HouseHeart, HandHeart, Users, MessageCircle, ArrowRight } from '@lucide/astro';
 ---
 
 <Layout title="Inicio">
@@ -459,116 +459,284 @@ import { UserGroup, Shell, LineSquiggle, MapPinPlus, MapPlus, HeartHandshake, Ho
     <!-- ============================================ -->
     <!-- 5. QUIÉNES SOMOS -->
     <!-- ============================================ -->
-    <section class="py-20 bg-amar-beige relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        
-        <div>
-          <h2 class="font-titulo text-4xl md:text-5xl font-bold mb-6">
-            Quiénes somos
+    <section class="py-24 bg-amar-beige relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+
+          <!-- Columna izquierda: texto -->
+          <div>
+            <p class="text-amar-cafe font-semibold text-base tracking-widest uppercase mb-4">
+              Somos <span class="font-amar text-xl text-amar-cafe">AMAR</span>
+            </p>
+            <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro mb-6 leading-tight">
+              Amor en <span class="text-amar-verde">movimiento</span>
+            </h2>
+            <p class="text-xl text-amar-gris leading-relaxed mb-6">
+              <span class="font-amar text-xl text-amar-gris">AMAR</span> —Amor en Movimiento, Acción y Resistencia— es una agrupación juvenil que trabaja desde la <strong class="text-amar-negro">educación popular y comunitaria</strong>. Creemos que el conocimiento se construye colectivamente y que la transformación social comienza desde los territorios, junto a quienes los habitan.
+            </p>
+            <p class="text-xl text-amar-gris leading-relaxed mb-10">
+              Desde 2018 venimos tejiendo procesos de conciencia, acción e incidencia. En 2026 daremos el paso para constituirnos como Fundación <span class="font-amar text-xl text-amar-gris">AMAR</span>.
+            </p>
+
+            <a href="/quienes-somos" class="inline-block bg-amar-verde text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-amar-verdeOscuro transition">
+              Conoce nuestra historia
+            </a>
+          </div>
+
+          <!-- Columna derecha: línea de tiempo -->
+          <div class="relative">
+
+            <!-- Línea horizontal de fondo -->
+            <div class="absolute top-12 left-0 right-0 h-px bg-amar-verde/30 hidden md:block"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4">
+
+              <!-- Hito 1: 2018 -->
+              <div class="text-center md:text-left relative">
+                <div class="w-6 h-6 rounded-full bg-amar-verde mx-auto md:mx-0 md:ml-0 mb-6 relative z-10"></div>
+                <div class="font-titulo text-4xl font-bold text-amar-verde mb-2">2018</div>
+                <h3 class="font-titulo text-lg font-bold text-amar-negro mb-2">
+                  Nace el proceso
+                </h3>
+                <p class="text-base text-amar-gris leading-snug">
+                  Comenzamos a tejer lo que hoy es AMAR, desde el encuentro con las comunidades.
+                </p>
+              </div>
+
+              <!-- Hito 2: 2025 -->
+              <div class="text-center md:text-left relative">
+                <div class="w-6 h-6 rounded-full bg-amar-verdeOscuro mx-auto md:mx-0 md:ml-0 mb-6 relative z-10"></div>
+                <div class="font-titulo text-4xl font-bold text-amar-verdeOscuro mb-2">2025</div>
+                <h3 class="font-titulo text-lg font-bold text-amar-negro mb-2">
+                  <span class="font-amar text-xl text-amar-negro">AMAR</span> se oficializa
+                </h3>
+                <p class="text-base text-amar-gris leading-snug">
+                  Nos constituimos formalmente como agrupación juvenil.
+                </p>
+              </div>
+
+              <!-- Hito 3: 2026 -->
+              <div class="text-center md:text-left relative">
+                <div class="w-6 h-6 rounded-full bg-amar-cafe mx-auto md:mx-0 md:ml-0 mb-6 relative z-10"></div>
+                <div class="font-titulo text-4xl font-bold text-amar-cafe mb-2">2026</div>
+                <h3 class="font-titulo text-lg font-bold text-amar-negro mb-2">
+                  Fundación <span class="font-amar text-xl text-amar-negro">AMAR</span>
+                </h3>
+                <p class="text-base text-amar-gris leading-snug">
+                  Damos el paso para constituirnos como fundación.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 6. VOCES DE AMAR - TESTIMONIOS -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-verde/10 relative overflow-hidden">
+
+      <!-- Comillas decorativas de fondo -->
+      <div class="absolute top-10 left-10 opacity-[0.04] pointer-events-none">
+        <span class="font-titulo text-[300px] leading-none text-amar-verde">"</span>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative">
+
+        <!-- Encabezado -->
+        <div class="text-center mb-20">
+          <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+            Voces de <span class="font-amar text-xl text-amar-cafe">AMAR</span>
+          </p>
+          <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro mb-6 leading-tight">
+            Lo que dicen <span class="text-amar-verde">quienes lo viven</span>
           </h2>
-          <p class="text-amar-gris leading-relaxed mb-4">
-            <strong class="font-amar text-amar-negro">AMAR</strong> —Amor en Movimiento, Acción y Resistencia— es un colectivo que nació en 2025 con una convicción: <em>los territorios se transforman cuando las juventudes los habitan, los sienten y los defienden.</em>
+          <p class="text-xl text-amar-gris max-w-2xl mx-auto">
+            Voces que nacen del territorio entre historias que se tejen.
           </p>
-          <p class="text-amar-gris leading-relaxed mb-8">
-            Trabajamos en Bogotá, principalmente en Engativá, acompañando procesos ambientales, de vida digna y paz. Nuestra misión es empoderar a los jóvenes para que se conviertan en agentes de cambio en sus comunidades, a través de programas educativos, talleres de habilidades y oportunidades de voluntariado.
+        </div>
+
+        <!-- Testimonios -->
+        <div class="grid md:grid-cols-2 gap-16 md:gap-20 max-w-5xl mx-auto">
+
+          <!-- Testimonio 1: Ana -->
+          <blockquote class="relative">
+            <!-- Video animado -->
+            <div class="w-32 h-32 rounded-full overflow-hidden mb-8 border-4 border-amar-cafe shadow-lg bg-amar-verde/20">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                class="w-full h-full object-cover"
+              >
+                <source src="/videos/ana-gif.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <!-- Cita -->
+            <p class="font-titulo text-2xl md:text-3xl text-amar-negro leading-snug mb-6">
+              "<span class="font-amar text-4xl text-amar-negro">AMAR</span> me ha dado la confianza que necesitaba para creer en mí misma."
+            </p>
+
+            <!-- Contexto -->
+            <p class="text-base text-amar-gris leading-relaxed mb-6">
+              Ana tiene 17 años y se unió hace dos meses. Gracias a las tutorías, mejoró sus calificaciones y ahora está en camino de ingresar a la universidad.
+            </p>
+
+            <!-- Nombre -->
+            <footer class="flex items-center gap-3">
+              <div class="w-8 h-px bg-amar-cafe"></div>
+              <span class="font-cuerpo text-base text-amar-verdeOscuro font-semibold">
+                Ana, 17 años
+              </span>
+            </footer>
+          </blockquote>
+
+          <!-- Testimonio 2: Carlos -->
+          <blockquote class="relative md:mt-16">
+            <!-- Video animado -->
+            <div class="w-32 h-32 rounded-full overflow-hidden mb-8 border-4 border-amar-cafe shadow-lg bg-amar-verde/20">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                class="w-full h-full object-cover"
+              >
+                <source src="/videos/carlos-gif.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <!-- Cita -->
+            <p class="font-titulo text-2xl md:text-3xl text-amar-negro leading-snug mb-6">
+              "Nunca pensé que podría ser un líder. <span class="font-amar text-4xl text-amar-negro">AMAR</span> me enseñó que puedo hacer una diferencia."
+            </p>
+
+            <!-- Contexto -->
+            <p class="text-base text-amar-gris leading-relaxed mb-6">
+              Carlos tiene 19 años y participó en un taller de liderazgo. Hoy lidera un proyecto de voluntariado en su comunidad.
+            </p>
+
+            <!-- Nombre -->
+            <footer class="flex items-center gap-3">
+              <div class="w-8 h-px bg-amar-cafe"></div>
+              <span class="font-cuerpo text-base text-amar-verdeOscuro font-semibold">
+                Carlos, 19 años
+              </span>
+            </footer>
+          </blockquote>
+
+        </div>
+
+        <!-- CTA final -->
+        <div class="text-center mt-24">
+          <p class="text-xl text-amar-gris mb-6">
+            ¿Tienes una historia con <span class="font-amar text-xl text-amar-gris">AMAR</span>?
           </p>
-          <a href="/quienes-somos" class="inline-block bg-amar-verde text-white px-7 py-3.5 rounded-full font-semibold hover:bg-amar-verdeOscuro transition">
-            Conoce nuestra historia
+          <a
+            href="/involucrate#contacto"
+            class="inline-block border-2 border-amar-verde text-amar-verde px-8 py-4 rounded-full font-semibold text-lg hover:bg-amar-verde hover:text-white transition"
+          >
+            Comparte tu testimonio
           </a>
         </div>
 
-        <div class="aspect-square rounded-3xl bg-amar-verde/20 flex items-center justify-center">
-          <p class="text-amar-verdeOscuro font-medium text-center px-6">
-            [Foto del equipo o de una actividad comunitaria]
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 7. SÉ PARTE DE AMAR - CTA FINAL -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-negro relative overflow-hidden">
+
+      <div class="max-w-7xl mx-auto px-6 relative">
+
+        <!-- Encabezado -->
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+          <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+            Sé parte de <span class="font-amar text-xl text-amar-cafe">AMAR</span>
           </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!-- 6. TESTIMONIOS -->
-    <!-- ============================================ -->
-    <section class="py-20 bg-amar-verde/10">
-      <div class="max-w-7xl mx-auto px-6">
-        <h2 class="font-titulo text-4xl md:text-5xl font-bold text-center mb-12">
-          Voces de <span class="font-amar text-5xl text-amar-negro">AMAR</span>
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          
-          <blockquote class="bg-white rounded-3xl p-8 shadow-sm">
-            <p class="text-lg text-amar-gris italic mb-4">
-              "<span class="font-amar text-xl text-amar-negro">AMAR</span> me ha dado la confianza que necesitaba para creer en mí misma."
-            </p>
-            <footer class="text-amar-verdeOscuro font-semibold">
-              — Ana, 17 años
-            </footer>
-          </blockquote>
-
-          <blockquote class="bg-white rounded-3xl p-8 shadow-sm">
-            <p class="text-lg text-amar-gris italic mb-4">
-              "Nunca pensé que podría ser un líder. <span class="font-amar text-xl text-amar-negro">AMAR</span> me enseñó que puedo hacer una diferencia."
-            </p>
-            <footer class="text-amar-verdeOscuro font-semibold">
-              — Carlos, 19 años
-            </footer>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!-- 7. INVOLÚCRATE -->
-    <!-- ============================================ -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-12">
-          <h2 class="font-titulo text-4xl md:text-5xl font-bold mb-4">
-            Sé parte de <span class="font-amar text-5xl text-amar-negro">AMAR</span>
+          <h2 class="font-titulo text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            ¿Cómo quieres <span class="text-amar-verde">transformar</span> tu territorio?
           </h2>
-          <p class="text-amar-gris text-lg md:text-xl max-w-2xl mx-auto">
-            Hay muchas formas de transformar territorios. Encuentra la tuya.
+          <p class="text-xl text-white/80 leading-relaxed">
+            Hay muchas formas de ser parte. Encuentra la tuya.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          
-          <a href="/involucrate#donar" class="bg-amar-beige rounded-3xl p-8 text-center hover:shadow-lg hover:bg-amar-verde/10 transition group">
-            <div class="text-5xl mb-4 group-hover:scale-110 transition">❤️</div>
-            <h3 class="font-titulo text-xl font-bold text-amar-verdeOscuro mb-2">
+        <!-- 3 opciones -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+
+          <!-- Donar -->
+          <a
+            href="/involucrate#donar"
+            class="group bg-amar-beige/5 backdrop-blur-sm border border-amar-beige/10 rounded-3xl p-8 text-center hover:bg-amar-beige/10 hover:border-amar-cafe/50 transition"
+          >
+            <div class="w-16 h-16 mx-auto rounded-full bg-amar-verde/20 flex items-center justify-center mb-6 transition group-hover:bg-amar-verde/30 group-hover:scale-110">
+              <HandHeart class="w-8 h-8 text-amar-verde" />
+            </div>
+            <h3 class="font-titulo text-2xl font-bold text-white mb-3">
               Donar
             </h3>
-            <p class="text-amar-gris text-sm">
-              Apoya nuestros procesos con un aporte
+            <p class="text-base text-white/70 leading-relaxed">
+              Apoya nuestros procesos con un aporte que sostiene el trabajo en territorio.
             </p>
           </a>
 
-          <a href="/involucrate#voluntariado" class="bg-amar-beige rounded-3xl p-8 text-center hover:shadow-lg hover:bg-amar-verde/10 transition group">
-            <div class="text-5xl mb-4 group-hover:scale-110 transition">👥</div>
-            <h3 class="font-titulo text-xl font-bold text-amar-verdeOscuro mb-2">
+          <!-- Voluntariado -->
+          <a
+            href="/involucrate#voluntariado"
+            class="group bg-amar-beige/5 backdrop-blur-sm border border-amar-beige/10 rounded-3xl p-8 text-center hover:bg-amar-beige/10 hover:border-amar-cafe/50 transition"
+          >
+            <div class="w-16 h-16 mx-auto rounded-full bg-amar-verde/20 flex items-center justify-center mb-6 transition group-hover:bg-amar-verde/30 group-hover:scale-110">
+              <Users class="w-8 h-8 text-amar-verde" />
+            </div>
+            <h3 class="font-titulo text-2xl font-bold text-white mb-3">
               Voluntariado
             </h3>
-            <p class="text-amar-gris text-sm">
-              Súmate a las actividades en territorio
+            <p class="text-base text-white/70 leading-relaxed">
+              Súmate a las actividades y procesos que acompañamos en territorio.
             </p>
           </a>
 
-          <a href="/involucrate#contacto" class="bg-amar-beige rounded-3xl p-8 text-center hover:shadow-lg hover:bg-amar-verde/10 transition group">
-            <div class="text-5xl mb-4 group-hover:scale-110 transition">💬</div>
-            <h3 class="font-titulo text-xl font-bold text-amar-verdeOscuro mb-2">
+          <!-- Contactar -->
+          <a
+            href="/involucrate#contacto"
+            class="group bg-amar-beige/5 backdrop-blur-sm border border-amar-beige/10 rounded-3xl p-8 text-center hover:bg-amar-beige/10 hover:border-amar-cafe/50 transition"
+          >
+            <div class="w-16 h-16 mx-auto rounded-full bg-amar-verde/20 flex items-center justify-center mb-6 transition group-hover:bg-amar-verde/30 group-hover:scale-110">
+              <MessageCircle class="w-8 h-8 text-amar-verde" />
+            </div>
+            <h3 class="font-titulo text-2xl font-bold text-white mb-3">
               Contactar
             </h3>
-            <p class="text-amar-gris text-sm">
-              Escríbenos para alianzas o consultas
+            <p class="text-base text-white/70 leading-relaxed">
+              Escríbenos para alianzas, consultorías o cualquier idea que quieras compartir.
             </p>
           </a>
+
         </div>
 
-        <div class="text-center mt-12">
-          <a href="/involucrate" class="inline-block bg-amar-verde text-white px-8 py-4 rounded-full font-semibold hover:bg-amar-verdeOscuro transition">
+        <!-- CTA principal -->
+        <div class="text-center">
+          <a
+            href="/involucrate"
+            class="group inline-flex items-center gap-3 bg-amar-verde text-white px-10 py-5 rounded-full font-semibold text-xl hover:bg-amar-verdeOscuro transition"
+          >
             Quiero involucrarme
+            <ArrowRight class="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </a>
+          <p class="text-sm text-white/50 mt-6">
+            También puedes <a href="/involucrate" class="underline hover:text-amar-beige transition">consultar todas las formas de participar</a>.
+          </p>
         </div>
+
       </div>
     </section>
 

@@ -2,19 +2,21 @@
 const year = new Date().getFullYear();
 ---
 
-<footer class="bg-amar-negro text-amar-beige mt-24">
+<footer class="bg-amar-gris text-amar-beige">
   <div class="max-w-7xl mx-auto px-6 py-16">
     
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
       
       <!-- Columna 1: Marca -->
       <div>
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 rounded-full bg-amar-verde flex items-center justify-center text-white font-titulo font-bold text-lg">
-            A
-          </div>
-          <span class="font-titulo font-bold text-xl">AMAR</span>
-        </div>
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-3 group">
+          <img
+            src="/images/amar-logo.png"
+            alt="AMAR — Amor en Movimiento, Acción y Resistencia"
+            class="h-25 w-auto transition-transform group-hover:scale-105"
+          />
+        </a>
         <p class="text-sm text-amar-beige/70 italic">
           Amor en Movimiento, Acción y Resistencia
         </p>
@@ -28,6 +30,7 @@ const year = new Date().getFullYear();
           <li><a href="/quienes-somos" class="hover:text-amar-verde transition">Quiénes somos</a></li>
           <li><a href="/que-hacemos" class="hover:text-amar-verde transition">Qué hacemos</a></li>
           <li><a href="/proyectos" class="hover:text-amar-verde transition">Proyectos</a></li>
+          <li><a href="/publicaciones" class="hover:text-amar-verde transition">Publicaciones</a></li>
           <li><a href="/involucrate" class="hover:text-amar-verde transition">Involúcrate</a></li>
         </ul>
       </div>
