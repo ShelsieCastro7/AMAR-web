@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Counter from '../components/Counter.astro';
+import { UserGroup, Shell, LineSquiggle, MapPinPlus, MapPlus, HeartHandshake, HouseHeart } from '@lucide/astro';
 ---
 
 <Layout title="Inicio">
@@ -10,213 +12,454 @@ import Footer from '../components/Footer.astro';
   <main class="pt-24">
 
     <!-- ============================================ -->
-    <!-- 1. HERO -->
+    <!-- 1. HERO CON VIDEO DE FONDO -->
     <!-- ============================================ -->
-    <section class="relative min-h-[85vh] flex items-center bg-amar-verde/10 overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+    <section class="relative min-h-screen flex items-center overflow-hidden">
 
-        <div>
-          <p class="text-amar-negro font-semibold text-sm tracking-widest uppercase mb-4">
-			<span class="font-amar text-xl text-amar-negro">AMAR </span>
-            · Amor en Movimiento, Acción y Resistencia
+      <!-- Video de fondo (solo desktop) -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="/images/amar-poster.jpeg"
+        preload="metadata"
+        class="hidden md:block absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videos/amar-hero.webm" type="video/webm" />
+      </video>
+
+      <!-- Imagen de fondo (solo móvil) -->
+      <img
+        src="/images/amar-poster.jpeg"
+        alt="Jóvenes transformando territorios"
+        class="md:hidden absolute inset-0 w-full h-full object-cover"
+      />
+
+      <!-- Overlay con degradado verde para identidad AMAR -->
+      <div class="absolute inset-0 bg-gradient-to-br from-amar-verde/30 via-amar-negro/40 to-amar-negro/70"></div>
+
+      <!-- Contenido -->
+      <div class="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
+        <div class="max-w-2xl">
+          <p class="text-amar-beige font-semibold text-sm tracking-widest uppercase mb-4">
+            <span class="font-amar text-xl text-amar-beige">AMAR </span> · Amor en Movimiento, Acción y Resistencia
           </p>
-          <h1 class="font-titulo text-5xl md:text-6xl lg:text-7xl font-bold text-amar-negro leading-tight mb-6">
-            Jóvenes transformando <span class="text-amar-verde">territorios</span>
+          <h1 class="font-titulo text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+            Jóvenes transformando <span class="text-amar-beige">territorios</span>
           </h1>
-          <p class="text-lg text-amar-gris leading-relaxed mb-6 max-w-xl">
+          <p class="text-lg text-white/90 leading-relaxed mb-6 max-w-xl">
             Acompañamos a jóvenes para que lideren la transformación de sus propios territorios: lo que les incomoda o les inspira en temas ambientales, de vida digna y paz.
           </p>
-          <p class="text-amar-verdeOscuro font-semibold italic mb-8">
-            <span class="font-amar text-xl text-amar-verde">AMAR </span>
-			es acción conscienete. Pasa a la acción y cambia el mundo.
+          <p class="text-amar-beige font-semibold italic mb-8">
+            <span class="font-amar text-xl text-amar-beige">AMAR </span> es acción consciente. Pasa a la acción y cambia el mundo. 
           </p>
 
           <div class="flex flex-wrap gap-4">
-            <a href="/que-hacemos" class="bg-amar-verde text-white px-7 py-3.5 rounded-full font-semibold hover:bg-amar-verdeOscuro transition">
+            <a href="/que-hacemos" class="text-xl bg-amar-verde text-white px-7 py-3.5 rounded-full font-semibold hover:bg-amar-verdeOscuro transition">
               Conoce nuestro trabajo
             </a>
-            <a href="/involucrate" class="border-2 border-amar-verde text-amar-verde px-7 py-3.5 rounded-full font-semibold hover:bg-amar-verde hover:text-white transition">
-              Súmate a 
-			  <span class="font-amar text-xl text-amar-verde"> AMAR</span>
+            <a href="/involucrate" class="text-xl border-2 border-white text-white px-7 py-3.5 rounded-full font-semibold hover:bg-white hover:text-amar-negro transition">
+              Súmate a <span class="font-amar text-inherit">AMAR </span>
             </a>
           </div>
         </div>
-
-        <!-- Imagen placeholder (luego pondrás foto real) -->
-        <div class="relative">
-          <div class="aspect-square rounded-3xl bg-amar-verde/30 flex items-center justify-center">
-            <p class="text-amar-verdeOscuro font-medium text-center px-6">
-              [Foto real del Humedal Jaboque<br />o del Festival Agua Madre]
-            </p>
-          </div>
-        </div>
       </div>
+
+      <!-- Indicador de scroll -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white/60 animate-bounce">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+
     </section>
 
     <!-- ============================================ -->
-    <!-- 2. MINI DASHBOARD -->
+    <!-- 2. MINI DASHBOARD CON FLIP CARDS -->
     <!-- ============================================ -->
-    <section class="py-20 bg-amar-beige">
+    <section class="py-20 bg-amar-verde/50">
       <div class="max-w-7xl mx-auto px-6">
         <h2 class="font-titulo text-4xl md:text-5xl font-bold text-center mb-4">
-        	¡Así late <span class="font-amar text-5xl text-amar-negro">AMAR</span>! 
+          ¡Así late <span class="font-amar text-5xl text-amar-negro">AMAR</span>!
         </h2>
-        <p class="text-center text-amar-gris text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-          Detrás de cada cifra hay un nombre, un territorio y una historia que se esta tejiendo.
+        <p class="text-center text-amar-gris text-lg md:text-xl mb-16 max-w-2xl mx-auto">
+          Detrás de cada cifra hay un nombre, un territorio y una historia que se está tejiendo.
         </p>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
           {[
-            { number: '+300', label: 'personas alcanzadas', icon: '👥' },
-            { number: '20', label: 'jóvenes en Amigos del Agua', icon: '🌱' },
-            { number: '+150', label: 'jóvenes en actividades', icon: '🤝' },
-            { number: '1', label: 'humedal cuidado: Jaboque', icon: '📍' },
+            {
+              number: 300,
+              prefix: '+',
+              icon: UserGroup,
+              frontText: 'Personas en movimiento',
+              backText: 'Jóvenes, familias y comunidades que se han sumado tanto a nuestras actividades: bici recorridos, caminatas, festivales y ferias; como a nuestros proyectos.'
+            },
+            {
+              number: 2,
+              prefix: '',
+              icon: Shell,
+              frontText: 'Proyectos espiral <span class="font-amar text-xl text-amar-blanco">AMAR </span>',
+              backText: '+40 guardianes del humedal han sido parte de <em>Amigos del Agua</em>  y <em>Humedales en Juego</em>: dos iniciativas nacidas y sostenidas junto a la comunidad del Jaboque.'
+            },
+            {
+              number: 10,
+              prefix: '+',
+              icon: LineSquiggle,
+              frontText: 'Tejiendo Redes',
+              backText: 'Bici recorridos, Festival Agua Madre, SOFA 2026, ferias locales, donaciones navideñas y la Red de Cambio Climático del Jardín Botánico. AMAR se mueve con otros.'
+            },
+            {
+              number: 4,
+              prefix: '',
+              icon: MapPinPlus,
+              frontText: 'Donde late <span class="font-amar text-xl text-amar-blanco">AMAR </span>',
+              backText: 'Humedal Jaboque en los barrios El Muelle y Las Mercedes en Engativá; Humedal Tingua Azul en Kennedy; y Buritaca en Santa Marta. Cuatro territorios, una misma apuesta por la vida.'
+            }
           ].map((stat) => (
-            <div class="text-center group">
-				<div class="text-4xl mb-3 transition-transform group-hover:scale-110">
-					{stat.icon}
-				</div>
-				<div class="font-titulo text-5xl md:text-6xl font-bold text-amar-verde mb-3 leading-none">
-					{stat.number}
-				</div>
-				<p class="text-sm md:text-base text-amar-gris leading-snug max-w-[180px] mx-auto">
-					{stat.label}
-				</p>
-			</div>
+            <div
+              class="group [perspective:1000px] h-80 cursor-pointer md:cursor-default"
+              data-flip-card
+            >
+              <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] md:group-hover:[transform:rotateY(180deg)]">
+
+                <!-- CARA FRONTAL -->
+                <div class="absolute inset-0 bg-white rounded-3xl p-6 flex flex-col items-center justify-between text-center shadow-sm [backface-visibility:hidden]">
+                  <div class="pt-4">
+                    <stat.icon class="w-14 h-14 mx-auto text-amar-cafe" />
+                  </div>
+                  <div class="font-numero text-6xl md:text-7xl font-bold text-amar-verde mb-2 leading-none">
+                    <Counter target={stat.number} prefix={stat.prefix} />
+                  </div>
+                  {/* <div class="w-8 h-0.5 bg-amar-naranja mx-auto mb-3"></div> */}
+                  <div class="pb-4">
+                    <p class="font-cuerpo text-xl text-amar-gris leading-snug" set:html={stat.frontText} />
+                  </div>
+
+                  <!-- Indicador "Toca" (solo móvil) -->
+                  <div class="absolute bottom-3 right-4 text-xs text-amar-gris/60 flex items-center gap-1 md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path>
+                      <path d="M21 3v5h-5"></path>
+                    </svg>
+                    <span>Toca</span>
+                  </div>
+                </div>
+
+                <!-- CARA TRASERA -->
+                <div class="absolute inset-0 bg-amar-verde rounded-3xl p-6 flex flex-col items-center justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                  <h3 class="font-titulo text-2xl font-bold text-white mb-3" set:html={stat.frontText} />
+                  <p class="font-cuerpo text-2xs text-white/90 leading-relaxed" set:html={stat.backText} />
+                </div>
+
+              </div>
+            </div>
           ))}
         </div>
+
+        <!-- Script para el tap en móvil -->
+        <script is:inline>
+          const isTouch = window.matchMedia('(hover: none)').matches;
+
+          if (isTouch) {
+            document.querySelectorAll('[data-flip-card]').forEach((card) => {
+              card.addEventListener('click', () => {
+                const inner = card.querySelector('div');
+                inner?.classList.toggle('[transform:rotateY(180deg)]');
+              });
+            });
+          }
+        </script>
       </div>
     </section>
 
     <!-- ============================================ -->
-    <!-- 3. QUÉ HACEMOS -->
+    <!-- 3. QUÉ HACEMOS - LÍNEAS EN ESPIRAL -->
     <!-- ============================================ -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-12">
-          <h2 class="font-titulo text-4xl md:text-5xl font-bold mb-4">
-            Líneas de trabajo
+    <section class="py-12 bg-amar-beige relative overflow-hidden">
+
+      <!-- Textura sutil de fondo -->
+      <div class="absolute inset-0 opacity-[0.15] pointer-events-none">
+        <div class="absolute top-20 left-10 w-96 h-96 rounded-full bg-amar-verde blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-amar-cafe blur-3xl"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative">
+
+        <!-- Encabezado -->
+        <div class="max-w-3xl mb-20">
+          <p class="text-amar-cafe font-semibold text-base tracking-widest uppercase mb-4">
+            Lo que nos mueve
+          </p>
+          <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro mb-6 leading-tight">
+            Líneas de <span class="text-amar-verde">trabajo</span>
           </h2>
-          <p class="text-amar-gris text-lg md:text-xl max-w-2xl mx-auto">
-            Trabajamos desde tres líneas que se entrelazan en cada territorio.
+          <p class="text-xl text-amar-gris leading-relaxed">
+            Trabajamos desde tres líneas que se entrelazan en cada territorio. No son caminos separados: son formas de recorrer la misma espiral.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <div class="bg-amar-beige rounded-3xl p-8 hover:shadow-lg transition">
-            <div class="text-5xl mb-4">🌍</div>
-            <h3 class="font-titulo text-2xl font-bold text-amar-verdeOscuro mb-4">
-              Territorio y ambiente
-            </h3>
-            <p class="text-amar-gris leading-relaxed">
-              Cuidamos, defendemos y recuperamos los ecosistemas que nos sostienen. Nuestro primer territorio de acción es el Humedal Jaboque, en Engativá, Bogotá.
-            </p>
+        <!-- ============================================ -->
+        <!-- DIAGRAMA CIRCULAR DE LAS 3 LÍNEAS -->
+        <!-- ============================================ -->
+        <div class="relative max-w-5xl mx-auto ">
+
+          <!-- SVG con las líneas curvas conectoras -->
+          <svg
+            class="absolute inset-0 w-full h-full pointer-events-none hidden md:block"
+            viewBox="0 0 800 800"
+            preserveAspectRatio="xMidYMid meet"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Centro -->
+            <circle cx="400" cy="400" r="8" fill="#E85D3A" />
+
+            <!-- Nodo 1: Territorio (arriba) -->
+            <path
+              d="M 400 400 Q 350 250 400 100"
+              fill="none"
+              stroke="#8B9A5B"
+              stroke-width="2"
+              stroke-opacity="0.4"
+              stroke-dasharray="6 6"
+            />
+
+            <!-- Nodo 2: Paz (derecha) -->
+            <path
+              d="M 400 400 Q 580 300 730 400"
+              fill="none"
+              stroke="#8B9A5B"
+              stroke-width="2"
+              stroke-opacity="0.4"
+              stroke-dasharray="6 6"
+            />
+
+            <!-- Nodo 3: Vida digna (izquierda) -->
+            <path
+              d="M 400 400 Q 220 500 70 400"
+              fill="none"
+              stroke="#8B9A5B"
+              stroke-width="2"
+              stroke-opacity="0.4"
+              stroke-dasharray="6 6"
+            />
+          </svg>
+
+          <!-- Grid de nodos -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 md:relative md:h-[800px]">
+
+            <!-- NODO 1: Territorio (arriba) -->
+            <div class="md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2 text-center group max-w-[320px] md:max-w-none">
+              <div class="w-28 h-28 mx-auto rounded-full bg-white border-2 border-amar-verde/30 flex items-center justify-center mb-6 transition group-hover:border-amar-cafe group-hover:scale-110 shadow-sm">
+                <MapPlus class="w-15 h-15 text-amar-cafe" />
+              </div>
+              <div class="font-titulo text-base text-amar-cafe font-bold mb-2">01</div>
+              <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-3">
+                Territorio y ambiente
+              </h3>
+              <p class="text-xl text-amar-gris leading-relaxed max-w-[260px] mx-auto">
+                Cuidamos, defendemos y recuperamos los ecosistemas que nos sostienen.
+              </p>
+            </div>
+
+            <!-- NODO 2: Paz (derecha) -->
+            <div class="md:absolute md:top-1/2 md:right-0 md:-translate-y-1/2 text-center group max-w-[320px] md:max-w-none">
+              <div class="w-28 h-28 mx-auto rounded-full bg-white border-2 border-amar-verde/30 flex items-center justify-center mb-6 transition group-hover:border-amar-cafe group-hover:scale-110 shadow-sm">
+                <HeartHandshake class="w-15 h-15 text-amar-cafe" />
+              </div>
+              <div class="font-titulo text-base text-amar-cafe font-bold mb-2">02</div>
+              <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-3">
+                Paz y convivencia
+              </h3>
+              <p class="text-xl text-amar-gris leading-relaxed max-w-[260px] mx-auto">
+                Construimos espacios de encuentro, diálogo y reconciliación.
+              </p>
+            </div>
+
+            <!-- NODO 3: Vida digna (izquierda) -->
+            <div class="md:absolute md:top-1/2 md:left-0 md:-translate-y-1/2 text-center group max-w-[320px] md:max-w-none">
+              <div class="w-28 h-28 mx-auto rounded-full bg-white border-2 border-amar-verde/30 flex items-center justify-center mb-6 transition group-hover:border-amar-cafe group-hover:scale-110 shadow-sm">
+                <HouseHeart class="w-15 h-15 text-amar-cafe" />
+              </div>
+              <div class="font-titulo text-base text-amar-cafe font-bold mb-2">03</div>
+              <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-3">
+                Vida digna y derechos
+              </h3>
+              <p class="text-xl text-amar-gris leading-relaxed max-w-[260px] mx-auto">
+                Promovemos condiciones de vida justas y el ejercicio pleno de los derechos.
+              </p>
+            </div>
+
           </div>
 
-          <div class="bg-amar-beige rounded-3xl p-8 hover:shadow-lg transition">
-            <div class="text-5xl mb-4">🕊️</div>
-            <h3 class="font-titulo text-2xl font-bold text-amar-verdeOscuro mb-4">
-              Paz y convivencia
-            </h3>
-            <p class="text-amar-gris leading-relaxed">
-              Construimos espacios de encuentro, diálogo y reconciliación entre las personas y con los territorios que habitan.
-            </p>
+          <!-- Centro: AMAR (visible solo en desktop) -->
+          <div class="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center z-10">
+            <div class="w-25 h-25 rounded-full bg-amar-verdeOscuro/90 flex items-center justify-center shadow-lg">
+              <span class="font-amar text-2xl text-white">AMAR</span>
+            </div>
           </div>
 
-          <div class="bg-amar-beige rounded-3xl p-8 hover:shadow-lg transition">
-            <div class="text-5xl mb-4">✊</div>
-            <h3 class="font-titulo text-2xl font-bold text-amar-verdeOscuro mb-4">
-              Vida digna y derechos
-            </h3>
-            <p class="text-amar-gris leading-relaxed">
-              Promovemos el acceso a condiciones de vida justas y el ejercicio pleno de los derechos, especialmente de las juventudes.
-            </p>
-          </div>
         </div>
+
       </div>
     </section>
 
     <!-- ============================================ -->
-    <!-- 4. PROYECTOS DESTACADOS -->
+    <!-- 4. PROYECTOS DESTACADOS - EFECTO PORSCHE -->
     <!-- ============================================ -->
-    <section class="py-20 bg-amar-beige">
+    <section class="py-24 bg-amar-ocre/50">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-12">
-          <h2 class="font-titulo text-4xl md:text-5xl font-bold mb-4">
-            Lo que estamos construyendo
+
+        <!-- Encabezado -->
+        <div class="max-w-3xl mb-16">
+          <p class="text-amar-cafe font-semibold text-base tracking-widest uppercase mb-4">
+            Así se mueve <span class="font-amar text-xl text-amar-cafe">AMAR</span>
+          </p>
+          <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro mb-6 leading-tight">
+            Iniciativas que <span class="text-amar-cafe">respiran</span>
           </h2>
-          <p class="text-amar-gris text-lg md:text-xl max-w-2xl mx-auto">
-            Iniciativas que nacen del encuentro con las comunidades.
+          <p class="text-xl text-amar-gris leading-relaxed">
+            No los hacemos para ellos. Los hacemos con ellos.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition">
-            <div class="aspect-video bg-amar-verde/20 flex items-center justify-center text-6xl">
-              🌊
-            </div>
-            <div class="p-6">
-              <h3 class="font-titulo text-xl font-bold text-amar-negro mb-3">
-                Amigos del Agua
-              </h3>
-              <p class="text-amar-gris text-sm leading-relaxed mb-4">
-                20 jóvenes organizados para cuidar el Humedal Jaboque, en Engativá, Bogotá.
-              </p>
-              <p class="text-amar-verdeOscuro text-sm font-semibold">
-                +150 jóvenes se han sumado a las actividades
-              </p>
-            </div>
-          </article>
+        <!-- Paneles interactivos -->
+          <div class="flex flex-col md:flex-row gap-4 md:h-[600px]">
 
-          <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition">
-            <div class="aspect-video bg-amar-verde/20 flex items-center justify-center text-6xl">
-              🎉
-            </div>
-            <div class="p-6">
-              <h3 class="font-titulo text-xl font-bold text-amar-negro mb-3">
-                Festival Agua Madre
-              </h3>
-              <p class="text-amar-gris text-sm leading-relaxed mb-4">
-                Encuentro artístico, cultural y comunitario en torno al agua y los territorios.
-              </p>
-              <p class="text-amar-verdeOscuro text-sm font-semibold">
-                +300 personas alcanzadas entre bici recorridos, caminatas y festival
-              </p>
-            </div>
-          </article>
+            <!-- PROYECTO 1: Amigos del Agua -->
+            <a
+              href="/proyectos"
+              data-expand-card
+              class="group relative rounded-3xl overflow-hidden md:flex-[1] md:hover:flex-[2] transition-all duration-700 ease-out h-[500px] md:h-auto cursor-pointer md:cursor-default"
+            >
+              <!-- Imagen de fondo -->
+              <img
+                src="/images/amigos-del-agua.jpg"
+                alt="Amigos del Agua"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
 
-          <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition">
-            <div class="aspect-video bg-amar-verde/20 flex items-center justify-center text-6xl">
-              🎲
-            </div>
-            <div class="p-6">
-              <h3 class="font-titulo text-xl font-bold text-amar-negro mb-3">
-                Juego de Mesa del Humedal
-              </h3>
-              <p class="text-amar-gris text-sm leading-relaxed mb-4">
-                Un juego co-diseñado con la comunidad, inspirado en el Humedal Jaboque.
-              </p>
-              <p class="text-amar-verdeOscuro text-sm font-semibold">
-                En diseño participativo durante 2025
-              </p>
-            </div>
-          </article>
-        </div>
+              <!-- Overlay oscuro -->
+              <div class="absolute inset-0 bg-gradient-to-t from-amar-negro/90 via-amar-negro/30 to-transparent"></div>
 
-        <div class="text-center mt-12">
-          <a href="/proyectos" class="inline-block border-2 border-amar-verde text-amar-verde px-7 py-3.5 rounded-full font-semibold hover:bg-amar-verde hover:text-white transition">
+              <!-- Contenido -->
+              <div class="absolute bottom-0 left-0 right-0 p-8 z-10">
+                <h3 class="font-titulo text-3xl md:text-4xl font-bold text-white mb-3">
+                  Amigos del Agua
+                </h3>
+
+                <!-- Descripción: colapsada por defecto en móvil, expandida en desktop al hover -->
+                <div class="max-h-0 md:max-h-0 overflow-hidden transition-all duration-700 md:group-hover:max-h-48">
+                  <p class="text-white/90 text-lg leading-relaxed mb-3">
+                    20 jóvenes organizados para cuidar el Humedal Jaboque, en Engativá, Bogotá.
+                  </p>
+                  <p class="text-amar-beige text-base font-semibold">
+                    +150 jóvenes se han sumado a las actividades
+                  </p>
+                  <div class="flex items-center gap-2 text-amar-beige mt-5">
+                    <span class="text-sm font-semibold">Ver más</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Indicador "Toca" (solo móvil) -->
+                <div class="md:hidden absolute top-6 right-6 text-xs text-white/70 flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path>
+                    <path d="M21 3v5h-5"></path>
+                  </svg>
+                  <span>Toca</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- PROYECTO 2: Humedales en Juego -->
+            <a
+              href="/proyectos"
+              data-expand-card
+              class="group relative rounded-3xl overflow-hidden md:flex-[1] md:hover:flex-[2] transition-all duration-700 ease-out h-[500px] md:h-auto cursor-pointer md:cursor-default"
+            >
+              <img
+                src="/images/humedales-en-juego.png"
+                alt="Humedales en Juego"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-amar-negro/90 via-amar-negro/30 to-transparent"></div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-8 z-10">
+                <h3 class="font-titulo text-3xl md:text-4xl font-bold text-white mb-3">
+                  Humedales en Juego
+                </h3>
+
+                <div class="max-h-0 md:max-h-0 overflow-hidden transition-all duration-700 md:group-hover:max-h-48">
+                  <p class="text-white/90 text-lg leading-relaxed mb-3">
+                    Un juego co-diseñado con la comunidad, inspirado en el Humedal Jaboque.
+                  </p>
+                  <p class="text-amar-beige text-base font-semibold">
+                    En diseño participativo durante 2026
+                  </p>
+                  <div class="flex items-center gap-2 text-amar-beige mt-5">
+                    <span class="text-sm font-semibold">Ver más</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Indicador "Toca" (solo móvil) -->
+                <div class="md:hidden absolute top-6 right-6 text-xs text-white/70 flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path>
+                    <path d="M21 3v5h-5"></path>
+                  </svg>
+                  <span>Toca</span>
+                </div>
+              </div>
+            </a>
+
+          </div>
+
+          <!-- Script para el tap en móvil -->
+          <script is:inline>
+            const isTouchProjects = window.matchMedia('(hover: none)').matches;
+
+            if (isTouchProjects) {
+              document.querySelectorAll('[data-expand-card]').forEach((card) => {
+                card.addEventListener('click', (e) => {
+                  if (e.target.closest('a') && e.target.closest('a') !== card) return;
+
+                  e.preventDefault();
+                  const inner = card.querySelector('[class*="max-h-0"]');
+                  if (inner) {
+                    inner.classList.toggle('max-h-0');
+                    inner.classList.toggle('max-h-48');
+                  }
+                });
+              });
+            }
+          </script>
+
+        <!-- Botón ver todos -->
+        <div class="text-center mt-16">
+          <a href="/proyectos" class="inline-block border-2 border-amar-cafe text-amar-cafe px-8 py-4 rounded-full font-semibold text-lg hover:bg-amar-cafe hover:text-white transition">
             Ver todos los proyectos
           </a>
         </div>
+
       </div>
     </section>
 
     <!-- ============================================ -->
     <!-- 5. QUIÉNES SOMOS -->
     <!-- ============================================ -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-amar-beige relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         
         <div>

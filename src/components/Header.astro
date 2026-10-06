@@ -1,4 +1,5 @@
 ---
+import { HandHeart } from '@lucide/astro';
 const navItems = [
   { name: 'Inicio', href: '/' },
   { name: 'Quiénes somos', href: '/quienes-somos' },
@@ -12,14 +13,15 @@ const currentPath = Astro.url.pathname;
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-amar-beige/95 backdrop-blur-sm border-b border-amar-verde/20">
-  <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+  <nav class="max-w-7xl mx-auto px-6 flex items-center justify-between">
     
     <!-- Logo -->
     <a href="/" class="flex items-center gap-3 group">
-      <div class="w-10 h-10 rounded-full bg-amar-verde flex items-center justify-center text-white font-titulo font-bold text-lg group-hover:bg-amar-verdeOscuro transition">
-        A
-      </div>
-      <span class="font-amar font-bold text-xl text-amar-verde">AMAR</span>
+      <img
+        src="/images/amar-logo.png"
+        alt="AMAR — Amor en Movimiento, Acción y Resistencia"
+        class="h-25 w-auto transition-transform group-hover:scale-105"
+      />
     </a>
 
     <!-- Navegación desktop -->
@@ -29,7 +31,7 @@ const currentPath = Astro.url.pathname;
           <a
             href={item.href}
             class:list={[
-              'text-sm font-medium transition hover:text-amar-verde',
+              'text-2sm font-medium transition hover:text-amar-verde',
               currentPath === item.href ? 'text-amar-verde font-semibold' : 'text-amar-gris',
             ]}
           >
@@ -42,9 +44,10 @@ const currentPath = Astro.url.pathname;
     <!-- CTA -->
     <a
       href="/involucrate"
-      class="hidden md:inline-block bg-amar-verde text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-amar-verdeOscuro transition"
+      class="hidden md:inline-block bg-amar-verde text-white px-5 py-2.5 rounded-full text-2sm font-semibold hover:bg-amar-verdeOscuro transition"
     >
-      Involúcrate
+      <HandHeart class="w-5 h-5 mr-2 inline-block" />
+      Donar
     </a>
 
     <!-- Menú móvil (botón) -->
@@ -73,7 +76,8 @@ const currentPath = Astro.url.pathname;
       ))}
       <li>
         <a href="/involucrate" class="inline-block bg-amar-verde text-white px-5 py-2.5 rounded-full text-sm font-semibold">
-          Involúcrate
+          <HandHeart class="w-5 h-5 mr-2 inline-block" />
+          Donar
         </a>
       </li>
     </ul>
