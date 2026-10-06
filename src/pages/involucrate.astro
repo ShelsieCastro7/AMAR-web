@@ -1,0 +1,227 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Sprout, GraduationCap, Handshake, Heart, Megaphone, ArrowRight, Mail, CircleFadingPlus, Calendar } from '@lucide/astro';
+---
+
+<Layout title="Involúcrate">
+  <Header />
+
+  <main class="pt-24">
+
+    <!-- ============================================ -->
+    <!-- 1. HERO DE PÁGINA -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-beige relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.06] pointer-events-none">
+        <div class="absolute top-20 left-10 w-96 h-96 rounded-full bg-amar-verde blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-amar-naranja blur-3xl"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative">
+        <div class="max-w-4xl">
+          <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-6">
+            Involúcrate
+          </p>
+          <h1 class="font-titulo text-5xl md:text-6xl lg:text-7xl font-bold text-amar-negro leading-tight mb-8">
+            Únete al <span class="text-amar-verde">movimiento</span>
+          </h1>
+          <p class="text-2xl md:text-3xl text-amar-gris leading-relaxed max-w-3xl">
+            Este es un camino que caminamos juntos. Si eres un joven que siente el llamado a transformar su realidad, si te indigna lo que ves en tu territorio y quieres actuar, si crees en el poder del amor organizado y la acción colectiva...
+          </p>
+          <p class="text-2xl md:text-3xl text-amar-verdeOscuro font-titulo italic mt-8 max-w-3xl">
+            Te invitamos a ser parte de <span class="font-amar text-3xl text-amar-verdeOscuro">AMAR</span>, a sumarte al movimiento, a poner tu amor en acción.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 2. ¿CÓMO PUEDES SUMARTE? -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="max-w-3xl mb-16">
+        <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+            Formas de participar
+        </p>
+        <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro leading-tight">
+            ¿Cómo puedes <span class="text-amar-verde">sumarte</span>?
+        </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- 1. Voluntariado permanente -->
+        <div id="voluntariado" class="group bg-amar-beige rounded-3xl p-8 flex flex-col hover:shadow-lg transition">
+            <div class="w-16 h-16 rounded-full bg-amar-verde/20 flex items-center justify-center mb-6 transition group-hover:bg-amar-verde/30 group-hover:scale-110">
+            <Sprout class="w-8 h-8 text-amar-verde" />
+            </div>
+            <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-4 leading-tight">
+            Voluntariado permanente
+            </h3>
+            <p class="text-base text-amar-gris leading-relaxed mb-6 flex-grow">
+            Únete al equipo de personas que trabajan de forma continua con AMAR. Los voluntarios permanentes participan activamente en los proyectos, actividades de campo y procesos comunitarios, aportando su tiempo y compromiso de manera sostenida.
+            </p>
+            <a href="#contacto" class="inline-flex items-center gap-2 text-amar-verde font-semibold group-hover:gap-3 transition-all">
+            Únete
+            <ArrowRight class="w-4 h-4" />
+            </a>
+        </div>
+
+        <!-- 2. Actividades / Eventos -->
+        <div id="eventos" class="group bg-amar-beige rounded-3xl p-8 flex flex-col hover:shadow-lg transition">
+            <div class="w-16 h-16 rounded-full bg-amar-verde/20 flex items-center justify-center mb-6 transition group-hover:bg-amar-verde/30 group-hover:scale-110">
+            <Calendar class="w-8 h-8 text-amar-verde" />
+            </div>
+            <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-4 leading-tight">
+            Actividades/Eventos
+            </h3>
+            <p class="text-base text-amar-gris leading-relaxed mb-6 flex-grow">
+            Participa en las jornadas y eventos periódicos que organiza AMAR. Son espacios abiertos a la comunidad donde puedes involucrarte sin necesidad de un compromiso permanente, y conocer de cerca el trabajo que realizamos en los territorios.
+            </p>
+            <a href="#contacto" class="inline-flex items-center gap-2 text-amar-verde font-semibold group-hover:gap-3 transition-all">
+            Únete
+            <ArrowRight class="w-4 h-4" />
+            </a>
+        </div>
+
+        <!-- 3. Soy educador/a -->
+        <div id="consultoria" class="group bg-amar-beige rounded-3xl p-8 flex flex-col hover:shadow-lg transition">
+            <div class="w-16 h-16 rounded-full bg-amar-verde/20 flex items-center justify-center mb-6 transition group-hover:bg-amar-verde/30 group-hover:scale-110">
+            <GraduationCap class="w-8 h-8 text-amar-verde" />
+            </div>
+            <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-4 leading-tight">
+            Soy educador/a o profesional
+            </h3>
+            <p class="text-base text-amar-gris leading-relaxed mb-6 flex-grow">
+            Comparte tus conocimientos, acompaña procesos, suma tus habilidades a nuestra red de colaboradores desde tu campo de conocimiento.
+            </p>
+            <a href="#contacto" class="inline-flex items-center gap-2 text-amar-verde font-semibold group-hover:gap-3 transition-all">
+            Quiero aportar
+            <ArrowRight class="w-4 h-4" />
+            </a>
+        </div>
+
+        <!-- 4. Soy organización -->
+        <div id="alianzas" class="group bg-amar-beige rounded-3xl p-8 flex flex-col hover:shadow-lg transition">
+            <div class="w-16 h-16 rounded-full bg-amar-verde/20 flex items-center justify-center mb-6 transition group-hover:bg-amar-verde/30 group-hover:scale-110">
+            <Handshake class="w-8 h-8 text-amar-verde" />
+            </div>
+            <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-4 leading-tight">
+            Soy organización y quiero crear alianzas
+            </h3>
+            <p class="text-base text-amar-gris leading-relaxed mb-6 flex-grow">
+            Trabajemos juntos en proyectos conjuntos, intercambio de experiencias y fortalecimiento mutuo.
+            </p>
+            <a href="#contacto" class="inline-flex items-center gap-2 text-amar-verde font-semibold group-hover:gap-3 transition-all">
+            Crear alianza
+            <ArrowRight class="w-4 h-4" />
+            </a>
+        </div>
+
+        <!-- 5. Donar -->
+        <div id="donar" class="group bg-amar-beige rounded-3xl p-8 flex flex-col hover:shadow-lg transition">
+            <div class="w-16 h-16 rounded-full bg-amar-cafe/20 flex items-center justify-center mb-6 transition group-hover:bg-amar-cafe/30 group-hover:scale-110">
+            <Heart class="w-8 h-8 text-amar-cafe" />
+            </div>
+            <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-4 leading-tight">
+            Quiero apoyar o donar
+            </h3>
+            <p class="text-base text-amar-gris leading-relaxed mb-6 flex-grow">
+            Tu apoyo económico o en especie nos ayuda a seguir creciendo y llevando estos procesos a más territorios.
+            </p>
+            <a href="#contacto" class="inline-flex items-center gap-2 text-amar-cafe font-semibold group-hover:gap-3 transition-all">
+            Quiero donar
+            <ArrowRight class="w-4 h-4" />
+            </a>
+        </div>
+
+        <!-- 6. Difundir -->
+        <div class="group bg-amar-beige rounded-3xl p-8 flex flex-col hover:shadow-lg transition">
+            <div class="w-16 h-16 rounded-full bg-amar-verde/20 flex items-center justify-center mb-6 transition group-hover:bg-amar-verde/30 group-hover:scale-110">
+            <Megaphone class="w-8 h-8 text-amar-verde" />
+            </div>
+            <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-4 leading-tight">
+            Quiero difundir el mensaje
+            </h3>
+            <p class="text-base text-amar-gris leading-relaxed mb-6 flex-grow">
+            Síguenos en redes sociales, comparte nuestras acciones, amplifica nuestras voces.
+            </p>
+            <a
+            href="https://instagram.com/amaragrupacion"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 text-amar-verde font-semibold group-hover:gap-3 transition-all"
+            >
+            Ir a Instagram
+            <ArrowRight class="w-4 h-4" />
+            </a>
+        </div>
+
+        </div>
+
+    </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 3. FRASE DE CIERRE -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-beige">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <p class="text-3xl md:text-4xl font-titulo text-amar-negro leading-snug italic mb-8">
+          "Porque otro mundo es posible, y ese mundo se construye desde el amor organizado, desde la juventud comprometida, desde la comunidad en movimiento."
+        </p>
+        <div class="w-16 h-px bg-amar-naranja mx-auto"></div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 4. CONTACTO -->
+    <!-- ============================================ -->
+    <section id="contacto" class="py-24 bg-amar-negro relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.06] pointer-events-none">
+        <div class="absolute top-20 left-10 w-96 h-96 rounded-full bg-amar-verde blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-amar-naranja blur-3xl"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-6 relative text-center">
+
+        <h2 class="font-titulo text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          Escríbenos y <span class="text-amar-beige">sumemos</span>
+        </h2>
+        <p class="text-xl text-white/80 mb-12 max-w-2xl mx-auto">
+          Cuéntanos desde dónde quieres aportar. Nos pondremos en contacto contigo lo antes posible.
+        </p>
+
+        <!-- CTA principal -->
+        <a
+          href="mailto:amaragrupacion@gmail.com"
+          class="group inline-flex items-center gap-3 bg-amar-verde text-white px-10 py-5 rounded-full font-semibold text-xl hover:bg-amar-verdeOscuro transition mb-12"
+        >
+          <Mail class="w-5 h-5" />
+          amaragrupacion@gmail.com
+        </a>
+
+        <!-- Redes -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a
+            href="https://instagram.com/amaragrupacion"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 text-white/80 hover:text-amar-beige transition text-lg"
+          >
+            <CircleFadingPlus class="w-5 h-5" />
+            @amaragrupacion
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
