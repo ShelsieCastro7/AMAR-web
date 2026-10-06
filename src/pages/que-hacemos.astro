@@ -1,0 +1,374 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Sparkles, Search, MessageCircle, Sprout, HeartHandshake, ArrowRight, User, Users, Globe, Monitor, MapPlus, HouseHeart } from '@lucide/astro';
+---
+
+<Layout title="Qué hacemos">
+  <Header />
+
+  <main class="pt-24">
+
+    <!-- ============================================ -->
+    <!-- 1. HERO DE PÁGINA -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-beige relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.06] pointer-events-none">
+        <div class="absolute top-20 left-10 w-96 h-96 rounded-full bg-amar-verde blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-amar-naranja blur-3xl"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative">
+        <div class="max-w-4xl">
+          <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-6">
+            Qué hacemos
+          </p>
+          <h1 class="font-titulo text-5xl md:text-6xl lg:text-7xl font-bold text-amar-negro leading-tight mb-8">
+            Formamos y acompañamos <br />
+            <span class="text-amar-verde">jóvenes líderes</span>
+          </h1>
+          <p class="text-2xl md:text-3xl text-amar-gris leading-relaxed max-w-3xl font-titulo italic">
+            Para que identifiquen las problemáticas que los atraviesan y lideren proyectos de transformación desde sus propios territorios.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 2. NUESTRO ENFOQUE -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="grid md:grid-cols-2 gap-16 items-start">
+
+          <div>
+            <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro leading-tight mb-6">
+              No hacemos proyectos <span class="text-amar-verde">POR</span> los jóvenes
+            </h2>
+            <p class="text-2xl font-titulo text-amar-verdeOscuro italic mb-8">
+              Los hacemos CON ellos y DESDE ellos.
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            <p class="text-xl text-amar-gris leading-relaxed">
+              Trabajamos desde la <strong class="text-amar-negro">educación basada en proyectos y problemas</strong>, identificando situaciones que nos perjudican: crisis ambiental, violencias, condiciones de vida precarias, vulneración de derechos humanos, entre otras.
+            </p>
+            <p class="text-xl text-amar-gris leading-relaxed">
+              A partir de ese diagnóstico, generamos proyectos y acciones concretas que proponen soluciones y contribuyen a la transformación.
+            </p>
+            <p class="text-xl text-amar-gris leading-relaxed">
+              Acompañamos a los jóvenes para que <strong class="text-amar-negro">alcen su voz, desarrollen su liderazgo y construyan el mundo en el que quieren vivir</strong>. Porque los jóvenes no son el futuro: son el presente.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 3. CÓMO LO HACEMOS -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-beige">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="max-w-3xl mb-16">
+          <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+            Nuestro método
+          </p>
+          <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro leading-tight">
+            ¿Cómo lo <span class="text-amar-verde">hacemos</span>?
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+          <div class="bg-white/70 rounded-3xl p-8">
+            <div class="w-14 h-14 rounded-full bg-amar-cafe/20 flex items-center justify-center mb-6">
+              <Users class="w-7 h-7 text-amar-cafe" />
+            </div>
+            <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-4">
+              Educación popular
+            </h3>
+            <p class="text-base text-amar-gris leading-relaxed">
+              Conectamos con las comunidades desde la transdisciplinariedad, reconociendo el valor de los saberes más allá de la academia.
+            </p>
+          </div>
+
+          <div class="bg-white/70 rounded-3xl p-8">
+            <div class="w-14 h-14 rounded-full bg-amar-cafe/20 flex items-center justify-center mb-6">
+              <Sparkles class="w-7 h-7 text-amar-cafe" />
+            </div>
+            <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-4">
+              Arte
+            </h3>
+            <p class="text-base text-amar-gris leading-relaxed">
+              El arte nos permite expresar, sensibilizar y soñar otros mundos posibles.
+            </p>
+          </div>
+
+          <div class="bg-white/70 rounded-3xl p-8">
+            <div class="w-14 h-14 rounded-full bg-amar-cafe/20 flex items-center justify-center mb-6">
+              <Search class="w-7 h-7 text-amar-cafe" />
+            </div>
+            <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-4">
+              Investigación
+            </h3>
+            <p class="text-base text-amar-gris leading-relaxed">
+              Nos ayuda a comprender las raíces de los problemas y a diseñar soluciones informadas.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 4. ESPIRAL A.M.A.R. -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-azulPetroleo/20">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="max-w-3xl mb-16">
+          <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+            Nuestro proceso educativo
+          </p>
+          <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro leading-tight mb-6">
+            La Espiral <span class="font-amar text-amar-verde">A.M.A.R.</span>
+          </h2>
+          <p class="text-xl text-amar-gris leading-relaxed">
+            Un proceso que, aunque tiene un orden lógico, es orgánico y no lineal. Los sueños están presentes a lo largo de todo el camino, las acciones pueden surgir en cualquier momento, los aprendizajes se comunican cuando emergen.
+          </p>
+        </div>
+
+        <!-- Los 5 momentos -->
+        <div class="space-y-8">
+
+          {[
+            {
+              number: '01',
+              icon: Sparkles,
+              title: 'Despertar',
+              subtitle: 'Sentir, sensibilizar, explorar y afinar la mirada',
+              desc: 'Todo comienza con el sentir: las emociones son nuestra primera conexión con el mundo. Sentimos indignación, preocupación, alegría, esperanza... Estas emociones despiertan nuestra conciencia y nos impulsan a explorar. Es el primer paso de la investigación.'
+            },
+            {
+              number: '02',
+              icon: Search,
+              title: 'Comprender',
+              subtitle: 'Investigar, diagnosticar y analizar',
+              desc: 'Vamos más allá de lo superficial. Nos organizamos para investigar las causas profundas de las problemáticas, hacemos diagnósticos participativos y analizamos el contexto. El conocimiento colectivo y los saberes comunitarios son fundamentales.'
+            },
+            {
+              number: '03',
+              icon: MessageCircle,
+              title: 'Soñar',
+              subtitle: 'Imaginar, crear y diseñar propuestas',
+              desc: 'Imaginamos otros mundos posibles. Nos organizamos colectivamente para crear alternativas y diseñar juntos las soluciones. El soñar no es fantasía: es proyección con esperanza, es construcción de lo que queremos ver.'
+            },
+            {
+              number: '04',
+              icon: Sprout,
+              title: 'Transformar',
+              subtitle: 'Actuar y movilizar',
+              desc: 'Ponemos en práctica lo soñado. Actuamos colectivamente, nos movilizamos, materializamos el cambio posible. La transformación no la hacemos solos: es resultado del tejido comunitario, del amor en movimiento.'
+            },
+            {
+              number: '05',
+              icon: HeartHandshake,
+              title: 'Sostener',
+              subtitle: 'Reflexionar, comunicar, evaluar y proyectar',
+              desc: 'Cuidamos lo construido. Reflexionamos sobre el camino recorrido, evaluamos el proceso y los impactos, comunicamos los aprendizajes y planeamos nuevos ciclos. Sostener es mantener viva la llama, es preparar el terreno para un nuevo despertar.'
+            }
+          ].map((item, index) => (
+            <div class="relative pl-8 md:pl-24 group">
+              <!-- Línea vertical conectora -->
+              {index < 4 && (
+                <div class="absolute top-16 left-3 md:left-10 w-px h-full bg-amar-verde/30"></div>
+              )}
+
+              <!-- Círculo con número -->
+              <div class="absolute left-0 md:left-4 top-2 w-8 h-8 md:w-14 md:h-14 rounded-full bg-amar-verde flex items-center justify-center text-white font-titulo font-bold text-sm md:text-lg">
+                {item.number}
+              </div>
+
+              <!-- Contenido -->
+              <div class="bg-amar-beige rounded-3xl p-8">
+                <div class="flex items-center gap-4 mb-4">
+                  <item.icon class="w-8 h-8 text-amar-verde" />
+                  <h3 class="font-titulo text-3xl font-bold text-amar-negro">
+                    {item.title}
+                  </h3>
+                </div>
+                <p class="text-amar-cafe font-semibold text-base mb-4">
+                  {item.subtitle}
+                </p>
+                <p class="text-lg text-amar-gris leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+
+        </div>
+
+        <!-- Nota final -->
+        <div class="mt-16 max-w-3xl mx-auto text-center bg-white rounded-3xl p-10">
+          <p class="text-2xl font-titulo text-amar-negro leading-snug italic">
+            "Este ciclo no termina: se repite, se profundiza, se expande con cada proyecto. <br />
+            <span class="text-amar-verde">Es una espiral de transformación continua.</span>"
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 5. NIVELES DE INCIDENCIA -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-beige">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="max-w-3xl mb-16">
+          <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+            Nuestro alcance
+          </p>
+          <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro leading-tight">
+            Niveles de <span class="text-amar-verde">incidencia</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          {[
+            { icon: User, title: 'Personal', desc: 'Transformación de cada persona que participa.' },
+            { icon: Users, title: 'Comunitario', desc: 'Familia, amigos, compañeros, vecinos.' },
+            { icon: Globe, title: 'Social', desc: 'Incidencia en políticas, espacios públicos y estructuras.' },
+            { icon: Monitor, title: 'Ciber', desc: 'Uso de espacios digitales para amplificar voces y acciones.' }
+          ].map((nivel) => (
+            <div class="bg-white rounded-3xl p-8 text-center group hover:shadow-lg transition">
+              <div class="w-14 h-14 mx-auto rounded-full bg-amar-verde/15 flex items-center justify-center mb-5 transition group-hover:bg-amar-verde/25 group-hover:scale-110">
+                <nivel.icon class="w-7 h-7 text-amar-verde" />
+              </div>
+              <h3 class="font-titulo text-xl font-bold text-amar-negro mb-3">
+                {nivel.title}
+              </h3>
+              <p class="text-base text-amar-gris leading-snug">
+                {nivel.desc}
+              </p>
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 6. DIMENSIONES A.M.A.R. -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="max-w-3xl mb-16">
+          <p class="text-amar-cafe font-semibold text-xl tracking-widest uppercase mb-4">
+            Nuestras líneas de trabajo
+          </p>
+          <h2 class="font-titulo text-4xl md:text-5xl font-bold text-amar-negro leading-tight mb-6">
+            Dimensiones <span class="font-amar text-amar-verde">A.M.A.R.</span>
+          </h2>
+          <p class="text-xl text-amar-gris leading-relaxed">
+            Trabajamos en tres grandes dimensiones del buen vivir, reconociendo que las problemáticas no existen aisladas sino que se entrelazan.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+          <!-- Territorio y ambiente -->
+          <div class="bg-amar-beige rounded-3xl p-8">
+            <MapPlus class="w-15 h-15 mb-6 text-amar-verde" />
+            <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-3">
+              Territorio y ambiente
+            </h3>
+            <p class="text-amar-verdeOscuro font-semibold text-base mb-4">
+              La vida en el territorio
+            </p>
+            <p class="text-base text-amar-gris leading-relaxed">
+              Crisis climática, agua, humedales, biodiversidad, huertas comunitarias, soberanía alimentaria, protección de la naturaleza, justicia ambiental.
+            </p>
+          </div>
+
+          <!-- Paz y convivencia -->
+          <div class="bg-amar-beige rounded-3xl p-8">
+            <HeartHandshake class="w-15 h-15 mb-6 text-amar-verde" />
+            <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-3">
+              Paz y convivencia
+            </h3>
+            <p class="text-amar-verdeOscuro font-semibold text-base mb-4">
+              La vida en comunidad
+            </p>
+            <p class="text-base text-amar-gris leading-relaxed">
+              Construcción de paz, resolución de conflictos, memoria social, reconciliación, no violencia, diálogo social, intercultural e intergeneracional.
+            </p>
+          </div>
+
+          <!-- Vida digna y derechos -->
+          <div class="bg-amar-beige rounded-3xl p-8">
+            <HouseHeart class="w-15 h-15 mb-6 text-amar-verde" />
+            <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-3">
+              Vida digna y derechos
+            </h3>
+            <p class="text-amar-verdeOscuro font-semibold text-base mb-4">
+              Condiciones para el buen vivir
+            </p>
+            <p class="text-base text-amar-gris leading-relaxed">
+              Derechos humanos, condiciones de vida, movilidad humana, prevención del suicidio y las violencias, proyectos de vida, equidad e igualdad.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="mt-16 max-w-3xl mx-auto text-center bg-amar-verde/10 rounded-3xl p-10">
+          <p class="text-2xl font-titulo text-amar-negro leading-snug italic">
+            "Estas líneas no son compartimentos cerrados: los proyectos pueden abordar múltiples dimensiones simultáneamente, <br class="hidden md:block" />
+            <span class="text-amar-verde">porque las realidades son complejas e interconectadas.</span>"
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 7. CTA FINAL -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-amar-negro relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.06] pointer-events-none">
+        <div class="absolute top-20 left-10 w-96 h-96 rounded-full bg-amar-verde blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-amar-naranja blur-3xl"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-6 relative text-center">
+        <h2 class="font-titulo text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          ¿Quieres <span class="text-amar-beige">hacer parte</span>?
+        </h2>
+        <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
+          Los jóvenes no son el futuro: son el presente. Y tú puedes ser parte de esta transformación.
+        </p>
+        <a
+          href="/involucrate"
+          class="group inline-flex items-center gap-3 bg-amar-verde text-white px-10 py-5 rounded-full font-semibold text-xl hover:bg-amar-verdeOscuro transition"
+        >
+          Quiero involucrarme
+          <ArrowRight class="w-5 h-5 transition-transform group-hover:translate-x-1" />
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
