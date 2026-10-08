@@ -68,7 +68,7 @@ import {
           </p>
 
           <div class="flex flex-wrap gap-4">
-            <a href="/que-hacemos" class="text-xl bg-amar-verde text-white px-7 py-3.5 rounded-full font-semibold hover:bg-amar-verdeOscuro transition">
+            <a href="/proyectos" class="text-xl bg-amar-verde text-white px-7 py-3.5 rounded-full font-semibold hover:bg-amar-verdeOscuro transition">
               Conoce nuestro trabajo
             </a>
             <a href="/involucrate" class="text-xl border-2 border-white text-white px-7 py-3.5 rounded-full font-semibold hover:bg-white hover:text-amar-negro transition">
@@ -121,7 +121,7 @@ import {
               prefix: '+',
               icon: LineSquiggle,
               frontText: 'Tejiendo Redes',
-              backText: 'Bici recorridos, Festival Agua Madre, SOFA 2026, ferias locales, donaciones navideñas y la Red de Cambio Climático del Jardín Botánico. AMAR se mueve con otros.'
+              backText: 'Bici recorridos, Festival Agua Madre, SOFA 2026, ferias locales, donaciones navideñas y la Red de Cambio Climático del Jardín Botánico. <span class="font-amar text-xl text-amar-blanco">AMAR </span> se mueve con otros.'
             },
             {
               number: 4,
@@ -265,7 +265,9 @@ import {
             <!-- NODO 1: Territorio (arriba) -->
             <div class="md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2 text-center group max-w-[320px] md:max-w-none">
               <div class="w-28 h-28 mx-auto rounded-full bg-white border-2 border-amar-verde/30 flex items-center justify-center mb-6 transition group-hover:border-amar-cafe group-hover:scale-110 shadow-sm">
-                <MapPlus class="w-15 h-15 text-amar-cafe" />
+                <a href="/que-hacemos">
+                  <MapPlus class="w-15 h-15 text-amar-cafe" />
+                </a>
               </div>
               <div class="font-titulo text-base text-amar-cafe font-bold mb-2">01</div>
               <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-3">
@@ -279,7 +281,9 @@ import {
             <!-- NODO 2: Paz (derecha) -->
             <div class="md:absolute md:top-1/2 md:right-0 md:-translate-y-1/2 text-center group max-w-[320px] md:max-w-none">
               <div class="w-28 h-28 mx-auto rounded-full bg-white border-2 border-amar-verde/30 flex items-center justify-center mb-6 transition group-hover:border-amar-cafe group-hover:scale-110 shadow-sm">
-                <HeartHandshake class="w-15 h-15 text-amar-cafe" />
+                <a href="/que-hacemos">
+                  <HeartHandshake class="w-15 h-15 text-amar-cafe" />
+                </a>
               </div>
               <div class="font-titulo text-base text-amar-cafe font-bold mb-2">02</div>
               <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-3">
@@ -293,7 +297,9 @@ import {
             <!-- NODO 3: Vida digna (izquierda) -->
             <div class="md:absolute md:top-1/2 md:left-0 md:-translate-y-1/2 text-center group max-w-[320px] md:max-w-none">
               <div class="w-28 h-28 mx-auto rounded-full bg-white border-2 border-amar-verde/30 flex items-center justify-center mb-6 transition group-hover:border-amar-cafe group-hover:scale-110 shadow-sm">
-                <HouseHeart class="w-15 h-15 text-amar-cafe" />
+                <a href="/que-hacemos">
+                  <HouseHeart class="w-15 h-15 text-amar-cafe" />
+                </a>
               </div>
               <div class="font-titulo text-base text-amar-cafe font-bold mb-2">03</div>
               <h3 class="font-titulo text-2xl font-bold text-amar-negro mb-3">
@@ -487,9 +493,6 @@ import {
             <p class="text-xl text-amar-gris leading-relaxed mb-6">
               <span class="font-amar text-xl text-amar-gris">AMAR</span> —Amor en Movimiento, Acción y Resistencia— es una agrupación juvenil que trabaja desde la <strong class="text-amar-negro">educación popular y comunitaria</strong>. Creemos que el conocimiento se construye colectivamente y que la transformación social comienza desde los territorios, junto a quienes los habitan.
             </p>
-            <p class="text-xl text-amar-gris leading-relaxed mb-10">
-              Desde 2018 venimos tejiendo procesos de conciencia, acción e incidencia. En 2026 daremos el paso para constituirnos como Fundación <span class="font-amar text-xl text-amar-gris">AMAR</span>.
-            </p>
 
             <a href="/quienes-somos" class="inline-block bg-amar-verde text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-amar-verdeOscuro transition">
               Conoce nuestra historia
@@ -502,19 +505,7 @@ import {
             <!-- Línea horizontal de fondo -->
             <div class="absolute top-12 left-0 right-0 h-px bg-amar-verde/30 hidden md:block"></div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4">
-
-              <!-- Hito 1: 2018 -->
-              <div class="text-center md:text-left relative">
-                <div class="w-6 h-6 rounded-full bg-amar-verde mx-auto md:mx-0 md:ml-0 mb-6 relative z-10"></div>
-                <div class="font-titulo text-4xl font-bold text-amar-verde mb-2">2018</div>
-                <h3 class="font-titulo text-lg font-bold text-amar-negro mb-2">
-                  Nace el proceso
-                </h3>
-                <p class="text-base text-amar-gris leading-snug">
-                  Comenzamos a tejer lo que hoy es AMAR, desde el encuentro con las comunidades.
-                </p>
-              </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4">
 
               <!-- Hito 2: 2025 -->
               <div class="text-center md:text-left relative">
@@ -533,10 +524,10 @@ import {
                 <div class="w-6 h-6 rounded-full bg-amar-cafe mx-auto md:mx-0 md:ml-0 mb-6 relative z-10"></div>
                 <div class="font-titulo text-4xl font-bold text-amar-cafe mb-2">2026</div>
                 <h3 class="font-titulo text-lg font-bold text-amar-negro mb-2">
-                  Fundación <span class="font-amar text-xl text-amar-negro">AMAR</span>
+                  Constitución legal <span class="font-amar text-xl text-amar-negro">AMAR</span>
                 </h3>
                 <p class="text-base text-amar-gris leading-snug">
-                  Damos el paso para constituirnos como fundación.
+                  Damos el paso para constituirnos legalmente dando estructura organizativa y sostenibilidad al trabajo que hemos venido construyendo.
                 </p>
               </div>
 
@@ -687,7 +678,7 @@ import {
 
           <!-- Donar -->
           <a
-            href="/involucrate#donar"
+            href="https://vaki.co/es/vaki/red-de-amigos-del-agua?utm_source=copy&utm_medium=share-dialog&utm_campaign=v4"
             class="group bg-amar-beige/5 backdrop-blur-sm border border-amar-beige/10 rounded-3xl p-8 text-center hover:bg-amar-beige/10 hover:border-amar-cafe/50 transition"
           >
             <div class="w-16 h-16 mx-auto rounded-full bg-amar-verde/20 flex items-center justify-center mb-6 transition group-hover:bg-amar-verde/30 group-hover:scale-110">
@@ -703,7 +694,7 @@ import {
 
           <!-- Voluntariado -->
           <a
-            href="/involucrate#voluntariado"
+            href="https://forms.gle/ytsSHVN78e2octaB8"
             class="group bg-amar-beige/5 backdrop-blur-sm border border-amar-beige/10 rounded-3xl p-8 text-center hover:bg-amar-beige/10 hover:border-amar-cafe/50 transition"
           >
             <div class="w-16 h-16 mx-auto rounded-full bg-amar-verde/20 flex items-center justify-center mb-6 transition group-hover:bg-amar-verde/30 group-hover:scale-110">
